@@ -26,6 +26,13 @@ const cardVariants = {
   },
 };
 
+/* ── Per-card program links (same in every language, matched by item order) ──
+   [0] Master's → MESI · [1] Bachelor's → ISIS */
+const EDUCATION_LINKS = [
+  'https://sistemas.uniandes.edu.co/es/mesi',
+  'https://sistemas.uniandes.edu.co/es/isis',
+];
+
 export default function Education() {
   const { t } = useTranslation();
   const items = t('education.items', { returnObjects: true });
@@ -52,11 +59,19 @@ export default function Education() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          {items.map((item, index) => (
-            <motion.div
+          {items.map((item, index) => {
+            const link = EDUCATION_LINKS[index];
+            const Card = link ? motion.a : motion.div;
+            const linkProps = link
+              ? { href: link, target: '_blank', rel: 'noopener noreferrer' }
+              : {};
+
+            return (
+            <Card
               key={index}
               className="glass-card education-card"
               variants={cardVariants}
+              {...linkProps}
             >
               {/* Icon */}
               <div className="education-card__icon">
@@ -91,8 +106,9 @@ export default function Education() {
                   ))}
                 </div>
               )}
-            </motion.div>
-          ))}
+            </Card>
+            );
+          })}
         </motion.div>
       </div>
     </section>

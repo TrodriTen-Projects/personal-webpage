@@ -83,9 +83,11 @@ export default function Contact() {
         {/* ── Subtitle ───────────────────────────────────────────────────── */}
         <motion.p
           className="section-subtitle text-secondary"
-          /* Drop the left-aligned-section padding so the subtitle stays
-             truly centered under the title. */
-          style={{ paddingLeft: 0 }}
+          /* The global `p { max-width: 65ch }` caps this box; without auto
+             side-margins it anchors left and its centered text drifts far
+             left of the column. Center the capped box and drop the
+             left-aligned-section padding. */
+          style={{ paddingLeft: 0, marginLeft: 'auto', marginRight: 'auto' }}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}

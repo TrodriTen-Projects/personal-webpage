@@ -51,4 +51,15 @@ i18n
     },
   });
 
+/* ── Keep <html lang> in sync with the active language ──────────────────────
+   The document was hardcoded to lang="en"; without this it never reflects the
+   selected language, hurting accessibility and SEO. */
+const syncHtmlLang = (lng) => {
+  if (typeof document !== 'undefined') {
+    document.documentElement.lang = (lng || i18n.language || 'en').slice(0, 2);
+  }
+};
+i18n.on('languageChanged', syncHtmlLang);
+i18n.on('initialized', () => syncHtmlLang(i18n.language));
+
 export default i18n;
