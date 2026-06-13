@@ -44,19 +44,40 @@
     "skillCategories": {
       "regulations": {
         "title": "Regulations",
-        "items": ["NIST CSF", "GDPR", "HIPAA"]
+        "items": [
+          "NIST CSF",
+          "GDPR",
+          "HIPAA"
+        ]
       },
       "cybersecurity": {
         "title": "Cybersecurity",
-        "items": ["Offensive and defensive security", "vulnerability analysis", "IT risk management", "communications infrastructure", "secure cloud architectures", "IoT"]
+        "items": [
+          "Offensive and defensive security",
+          "vulnerability analysis",
+          "IT risk management",
+          "communications infrastructure",
+          "secure cloud architectures",
+          "IoT"
+        ]
       },
       "tools": {
         "title": "Tools & Tech",
-        "items": ["Python", "Bash", "FastAPI", "PostgreSQL", "React", "Git"]
+        "items": [
+          "Python",
+          "Bash",
+          "FastAPI",
+          "PostgreSQL",
+          "React",
+          "Git"
+        ]
       },
       "languages": {
         "title": "Languages",
-        "items": ["Spanish (Native)", "English (B2)"]
+        "items": [
+          "Spanish (Native)",
+          "English (B2)"
+        ]
       }
     }
   },
@@ -96,13 +117,17 @@
         "degree": "Master's Degree in Information Security",
         "institution": "Universidad de los Andes",
         "period": "Jan 2026 — Jun 2027",
-        "courses": ["Relevant Courses: Network Defense and Cybersecurity, Cryptographic Engineering, Cloud Security."]
+        "courses": [
+          "Relevant Courses: Network Defense and Cybersecurity, Cryptographic Engineering, Cloud Security."
+        ]
       },
       {
         "degree": "Bachelor's in Systems and Computer Engineering",
         "institution": "Universidad de los Andes",
         "period": "Jan 2022 — Dec 2025",
-        "activities": ["ML Engineer at Sinfonía Uniandes & Full-stack Developer at SpaceTech AESS UniAndes"]
+        "activities": [
+          "ML Engineer at Sinfonía Uniandes & Full-stack Developer at SpaceTech AESS UniAndes"
+        ]
       }
     ]
   },
@@ -126,7 +151,7 @@
   "contact": {
     "title": "Get In Touch",
     "subtitle": "Let's build something secure together.",
-    "email": "contact@trodriten.com",
+    "email": "web@trodriten.com",
     "whatsapp": "+57 317 619 3232",
     "linkedin": "tomasalbertorodriguez",
     "github": "TrodriTen",

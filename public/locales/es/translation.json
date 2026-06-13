@@ -44,19 +44,40 @@
     "skillCategories": {
       "regulations": {
         "title": "Regulaciones",
-        "items": ["NIST CSF", "GDPR", "HIPAA"]
+        "items": [
+          "NIST CSF",
+          "GDPR",
+          "HIPAA"
+        ]
       },
       "cybersecurity": {
         "title": "Ciberseguridad",
-        "items": ["Seguridad ofensiva y defensiva", "análisis de vulnerabilidades", "gestión de riesgos de TI", "infraestructura de comunicaciones", "arquitecturas seguras en la nube", "IoT"]
+        "items": [
+          "Seguridad ofensiva y defensiva",
+          "análisis de vulnerabilidades",
+          "gestión de riesgos de TI",
+          "infraestructura de comunicaciones",
+          "arquitecturas seguras en la nube",
+          "IoT"
+        ]
       },
       "tools": {
         "title": "Herramientas y Tecnologías",
-        "items": ["Python", "Bash", "FastAPI", "PostgreSQL", "React", "Git"]
+        "items": [
+          "Python",
+          "Bash",
+          "FastAPI",
+          "PostgreSQL",
+          "React",
+          "Git"
+        ]
       },
       "languages": {
         "title": "Idiomas",
-        "items": ["Español (Nativo)", "Inglés (B2)"]
+        "items": [
+          "Español (Nativo)",
+          "Inglés (B2)"
+        ]
       }
     }
   },
@@ -96,13 +117,17 @@
         "degree": "Maestría en Seguridad de la Información",
         "institution": "Universidad de los Andes",
         "period": "Ene 2026 — Jun 2027",
-        "courses": ["Cursos Relevantes: Defensa de Redes y Ciberseguridad, Ingeniería Criptográfica, Seguridad en la Nube."]
+        "courses": [
+          "Cursos Relevantes: Defensa de Redes y Ciberseguridad, Ingeniería Criptográfica, Seguridad en la Nube."
+        ]
       },
       {
         "degree": "Pregrado en Ingeniería de Sistemas y Computación",
         "institution": "Universidad de los Andes",
         "period": "Ene 2022 — Dic 2025",
-        "activities": ["Ingeniero de Machine Learning en Sinfonía Uniandes y Desarrollador Full-stack en SpaceTech AESS UniAndes"]
+        "activities": [
+          "Ingeniero de Machine Learning en Sinfonía Uniandes y Desarrollador Full-stack en SpaceTech AESS UniAndes"
+        ]
       }
     ]
   },
@@ -126,7 +151,7 @@
   "contact": {
     "title": "Contáctame",
     "subtitle": "Construyamos algo seguro juntos.",
-    "email": "contact@trodriten.com",
+    "email": "web@trodriten.com",
     "whatsapp": "+57 317 619 3232",
     "linkedin": "tomasalbertorodriguez",
     "github": "TrodriTen",

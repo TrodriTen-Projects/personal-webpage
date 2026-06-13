@@ -102,7 +102,7 @@ export default function Hero() {
       {/* ── Services & Contact Section ──────────────────────────────────────── */}
       <section id="services-grid" className="services-section">
         <div className="section__inner section__inner--hero" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))', gap: 'var(--sp-8)', alignItems: 'start' }}>
-          
+
           {/* Services Grid */}
           <motion.div
             className="services-grid-container"
@@ -125,7 +125,7 @@ export default function Hero() {
                     visible: { opacity: 1, y: 0 }
                   }}
                 >
-                  <div className="service-card__icon"><Icon size={32} style={{ marginBottom: '1rem', color: 'var(--color-accent)' }}/></div>
+                  <div className="service-card__icon"><Icon size={32} style={{ marginBottom: '1rem', color: 'var(--color-accent)' }} /></div>
                   <h3 className="mono accent-text" style={{ fontSize: 'var(--fs-md)', marginBottom: 'var(--sp-2)' }}>
                     {t(`hero.services.${svc.id}.title`)}
                   </h3>
@@ -151,24 +151,24 @@ export default function Hero() {
             <p style={{ marginBottom: 'var(--sp-8)', maxWidth: '600px' }}>
               {t('hero.cta.description')}
             </p>
-            <form 
-              action="mailto:contact@trodriten.com" 
-              method="post" 
+            <form
+              action="mailto:web@trodriten.com"
+              method="post"
               encType="text/plain"
               style={{ display: 'flex', gap: 'var(--sp-4)', width: '100%', maxWidth: '500px', flexDirection: 'column' }}
             >
-              <input 
-                type="text" 
-                name="name" 
-                placeholder={t('hero.cta.namePlaceholder')} 
-                required 
+              <input
+                type="text"
+                name="name"
+                placeholder={t('hero.cta.namePlaceholder')}
+                required
                 className="form-input"
               />
-              <textarea 
-                name="body" 
-                placeholder={t('hero.cta.bodyPlaceholder')} 
-                rows="4" 
-                required 
+              <textarea
+                name="body"
+                placeholder={t('hero.cta.bodyPlaceholder')}
+                rows="4"
+                required
                 className="form-input"
               ></textarea>
               <button type="submit" className="cta-button" style={{ width: '100%', justifyContent: 'center' }}>

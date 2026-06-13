@@ -131,7 +131,7 @@ export default function Contact() {
           transition={{ duration: 0.5, delay: 0.4 }}
         >
           <a
-            href="mailto:contact@trodriten.com"
+            href="mailto:web@trodriten.com"
             className="cta-button"
           >
             {t('contact.cta')}
