@@ -101,7 +101,7 @@ export default function Hero() {
 
       {/* ── Services & Contact Section ──────────────────────────────────────── */}
       <section id="services-grid" className="services-section">
-        <div className="section__inner section__inner--hero" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: 'var(--sp-8)', alignItems: 'start' }}>
+        <div className="section__inner section__inner--hero" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))', gap: 'var(--sp-8)', alignItems: 'start' }}>
           
           {/* Services Grid */}
           <motion.div
@@ -112,7 +112,7 @@ export default function Hero() {
             variants={{
               visible: { transition: { staggerChildren: 0.15 } }
             }}
-            style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 'var(--sp-6)' }}
+            style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', gap: 'var(--sp-6)' }}
           >
             {services.map((svc) => {
               const Icon = svc.icon;

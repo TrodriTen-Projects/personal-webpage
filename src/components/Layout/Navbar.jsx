@@ -11,7 +11,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { NavLink } from 'react-router-dom';
-import { FaEarthAmericas } from 'react-icons/fa6';
+import { FaEarthAmericas, FaBars, FaXmark } from 'react-icons/fa6';
 
 const NAV_ITEMS = [
   { key: 'home',         path: '/' },
@@ -29,6 +29,10 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [hidden, setHidden] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
+
+  /* ── Mobile menu ─────────────────────────────────────────────────────── */
+  const [menuOpen, setMenuOpen] = useState(false);
+  const closeMenu = useCallback(() => setMenuOpen(false), []);
 
   useEffect(() => {
     const onScroll = () => {
@@ -66,16 +70,18 @@ export default function Navbar() {
       <NavLink
         to="/"
         className="navbar__logo"
+        onClick={closeMenu}
       >
         T.R.
       </NavLink>
 
-      {/* ── Navigation links ─────────────────────────────────────────────── */}
-      <div className="navbar__links">
+      {/* ── Navigation links (collapses into a dropdown on mobile) ───────── */}
+      <div className={`navbar__links${menuOpen ? ' navbar__links--open' : ''}`}>
         {NAV_ITEMS.map(({ key, path }) => (
           <NavLink
             key={key}
             to={path}
+            onClick={closeMenu}
             className={({ isActive }) => `navbar__link${isActive ? ' navbar__link--active' : ''}`}
           >
             {t(`nav.${key}`)}
@@ -83,24 +89,37 @@ export default function Navbar() {
         ))}
       </div>
 
-      {/* ── Language toggle ──────────────────────────────────────────────── */}
-      <button
-        className="lang-toggle"
-        onClick={toggleLanguage}
-        aria-label={t('nav.language')}
-      >
-        <FaEarthAmericas style={{ color: 'var(--color-accent)', marginRight: '4px' }} />
-        <span
-          className={`lang-toggle__option${currentLang === 'en' ? ' lang-toggle__option--active' : ''}`}
+      {/* ── Right-side actions ───────────────────────────────────────────── */}
+      <div className="navbar__actions">
+        {/* Language toggle */}
+        <button
+          className="lang-toggle"
+          onClick={toggleLanguage}
+          aria-label={t('nav.language')}
         >
-          EN
-        </span>
-        <span
-          className={`lang-toggle__option${currentLang === 'es' ? ' lang-toggle__option--active' : ''}`}
+          <FaEarthAmericas style={{ color: 'var(--color-accent)', marginRight: '4px' }} />
+          <span
+            className={`lang-toggle__option${currentLang === 'en' ? ' lang-toggle__option--active' : ''}`}
+          >
+            EN
+          </span>
+          <span
+            className={`lang-toggle__option${currentLang === 'es' ? ' lang-toggle__option--active' : ''}`}
+          >
+            ES
+          </span>
+        </button>
+
+        {/* Hamburger — mobile only (shown via CSS ≤768px) */}
+        <button
+          className="navbar__toggle"
+          onClick={() => setMenuOpen((open) => !open)}
+          aria-label="Menu"
+          aria-expanded={menuOpen}
         >
-          ES
-        </span>
-      </button>
+          {menuOpen ? <FaXmark /> : <FaBars />}
+        </button>
+      </div>
     </motion.nav>
   );
 }

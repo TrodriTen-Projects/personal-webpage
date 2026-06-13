@@ -262,6 +262,25 @@ code, pre {
   font-weight: 700;
 }
 
+/* ── Right-side actions + mobile hamburger ─────────────────────────────── */
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+}
+
+.navbar__toggle {
+  display: none; /* shown only on mobile (≤768px) */
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fs-xl);
+  color: var(--color-text);
+  background: none;
+  border: none;
+  padding: var(--sp-1);
+  cursor: pointer;
+}
+
 /* ═══════════════════════════════════════════════════════════════════════════
    5. SECTIONS
    ═══════════════════════════════════════════════════════════════════════════ */
@@ -914,7 +933,9 @@ html {
    ═══════════════════════════════════════════════════════════════════════════ */
 .publications-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  /* min(100%, 320px) keeps the column from forcing horizontal overflow on
+     phones narrower than 320px + padding. */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
   gap: var(--sp-8);
 }
 
@@ -1014,9 +1035,36 @@ html {
     --nav-height: 56px;
   }
 
-  /* Navbar */
+  /* Navbar — collapse links into a hamburger dropdown */
   .navbar { padding: 0 var(--sp-4); }
-  .navbar__links { display: none; } /* replaced by mobile menu */
+
+  .navbar__toggle { display: inline-flex; }
+
+  .navbar__links {
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    display: none; /* shown when .navbar__links--open */
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: var(--sp-2) var(--sp-6) var(--sp-4);
+    background: rgba(5, 5, 5, 0.98);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  }
+
+  .navbar__links--open { display: flex; }
+
+  .navbar__link {
+    width: 100%;
+    padding: var(--sp-4) 0;
+    font-size: var(--fs-base);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
 
   /* Skills */
   .skills-grid { grid-template-columns: 1fr; }
