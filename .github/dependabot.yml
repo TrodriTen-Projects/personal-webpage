@@ -1,0 +1,20 @@
+# Keeps dependencies patched over time — closes the long tail of H-02
+# (e.g. the vite/esbuild dev-toolchain advisory) via reviewable PRs you can
+# test before merging, instead of a risky one-shot major bump.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    groups:
+      dev-dependencies:
+        dependency-type: development
+      prod-dependencies:
+        dependency-type: production
+
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly

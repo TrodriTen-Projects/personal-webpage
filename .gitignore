@@ -4,3 +4,17 @@ dist
 .DS_Store
 .claude
 .devcontainer
+
+# Environment & secrets — never commit these
+.env
+.env.*
+!.env.example
+
+# Cloudflare / Wrangler
+.wrangler/
+.dev.vars
+
+# Logs & backups
+*.log
+npm-debug.log*
+*.bak

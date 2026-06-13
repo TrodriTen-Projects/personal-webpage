@@ -9,6 +9,7 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { FaFileAlt } from 'react-icons/fa';
+import { safeHref } from '../../utils/url';
 
 /* ── Animation variants ──────────────────────────────────────────────────── */
 const containerVariants = {
@@ -54,7 +55,7 @@ export default function Publications() {
           {items.map((item, index) => (
             <motion.a
               key={index}
-              href={item.link || '#'}
+              href={safeHref(item.link)}
               target="_blank"
               rel="noopener noreferrer"
               className="glass-card publication-card"

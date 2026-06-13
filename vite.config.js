@@ -10,5 +10,9 @@ export default defineConfig({
   build: {
     target: 'esnext',
     minify: 'esbuild',
+    // Drop the inline modulepreload polyfill so the built index.html has no
+    // inline <script>; this keeps a strict `script-src 'self'` CSP clean.
+    // (Targets are modern browsers with native modulepreload support.)
+    modulePreload: { polyfill: false },
   },
 });
