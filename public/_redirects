@@ -1,5 +1,3 @@
-# SPA fallback for react-router (BrowserRouter): serve index.html for any
-# path that is not a real static file, so deep links / refresh work on
-# Cloudflare Pages. Real files (/assets/*, /locales/*, /favicon.svg) are
-# served directly and are not affected by this rewrite.
-/*    /index.html   200
+https://trodriten.com/* https://www.trodriten.com/:splat 301!
+https://web.trodriten.com/* https://www.trodriten.com/:splat 301!
+https://trodriten-portfolio.pages.dev/* https://www.trodriten.com/:splat 301!
