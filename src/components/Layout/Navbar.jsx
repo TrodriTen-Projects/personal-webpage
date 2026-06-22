@@ -12,6 +12,7 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { NavLink } from 'react-router-dom';
 import { FaEarthAmericas, FaBars, FaXmark } from 'react-icons/fa6';
+import NavDock from './NavDock';
 
 const NAV_ITEMS = [
   { key: 'home',         path: '/' },
@@ -88,6 +89,9 @@ export default function Navbar() {
           </NavLink>
         ))}
       </div>
+
+      {/* ── Desktop NavDock (macOS style menu) ────────────────────────────── */}
+      <NavDock />
 
       {/* ── Right-side actions ───────────────────────────────────────────── */}
       <div className="navbar__actions">

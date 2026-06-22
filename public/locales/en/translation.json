@@ -6,6 +6,7 @@
     "education": "Education",
     "publications": "Publications",
     "contact": "Contact",
+    "clients": "Clients",
     "language": "Language"
   },
   "hero": {
@@ -157,5 +158,16 @@
     "github": "TrodriTen",
     "cta": "Send me an email",
     "footer": "© 2026 Tomas Rodriguez. All rights reserved."
+  },
+  "clients": {
+    "title": "Clients & Projects",
+    "description": "Some of the awesome projects and clients I've worked with.",
+    "items": [
+      {
+        "name": "Luxury Smile Architects",
+        "description": "Dental clinic website and infrastructure.",
+        "link": "https://luxurysmile.eu/"
+      }
+    ]
   }
 }

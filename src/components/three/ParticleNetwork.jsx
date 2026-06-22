@@ -22,14 +22,17 @@ import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 
 /* ── tunables ──────────────────────────────────────────────────────────── */
-const PARTICLE_COUNT    = 2000;
+/* Sparser, more elegant field (and far lighter on the GPU) than the old 2000.
+   Halved again on phones. */
+const IS_MOBILE         = typeof window !== 'undefined' && window.innerWidth < 768;
+const PARTICLE_COUNT    = IS_MOBILE ? 450 : 900;
 const SHELL_INNER       = 4.0;
 const SHELL_OUTER       = 8.0;
 const REPULSION_RADIUS  = 2.5;
 const REPULSION_FORCE   = 0.12;
 const SPRING_FACTOR     = 0.018;
 const CONNECT_DIST      = 0.8;
-const MAX_LINES         = 350;
+const MAX_LINES         = 240;
 const ROTATION_SPEED    = 0.0004;
 const PARTICLE_SIZE     = 0.022;
 

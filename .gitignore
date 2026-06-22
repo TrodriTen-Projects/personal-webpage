@@ -4,6 +4,7 @@ dist
 .DS_Store
 .claude
 .devcontainer
+dist
 
 # Environment & secrets — never commit these
 .env

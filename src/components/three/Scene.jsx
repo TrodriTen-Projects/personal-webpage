@@ -4,11 +4,10 @@ import { Stars, Preload } from '@react-three/drei';
 import {
   EffectComposer,
   Bloom,
-  ChromaticAberration,
   Vignette,
   Glitch,
 } from '@react-three/postprocessing';
-import { BlendFunction, GlitchMode } from 'postprocessing';
+import { GlitchMode } from 'postprocessing';
 import * as THREE from 'three';
 import CryptoCore from './CryptoCore';
 import ParticleNetwork from './ParticleNetwork';
@@ -92,14 +91,8 @@ function SceneContent({ mouse, pathname }) {
         <Bloom
           luminanceThreshold={0.3}
           luminanceSmoothing={0.9}
-          intensity={1.8}
+          intensity={1.1}
           mipmapBlur
-        />
-        <ChromaticAberration
-          blendFunction={BlendFunction.NORMAL}
-          offset={new THREE.Vector2(0.0006, 0.0006)}
-          radialModulation
-          modulationOffset={0.2}
         />
         <Vignette
           eskil={false}

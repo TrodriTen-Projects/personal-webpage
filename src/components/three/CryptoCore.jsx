@@ -46,6 +46,7 @@ export default function CryptoCore({ mouse, pathname = '/' }) {
   const groupRef = useRef();
   const coreRef  = useRef();
   const ringsRef = useRef([]);
+  const scanRef  = useRef();
 
   /* ── memoised ring material ──────────────────────────────────────── */
   const ringMat = useMemo(
@@ -81,6 +82,18 @@ export default function CryptoCore({ mouse, pathname = '/' }) {
       // Rotate around own Z (which is tilted via the Euler above)
       ring.rotation.z += cfg.speed;
     });
+
+    /* --- holographic scan ring sweeping the vault vertically ----- *
+     * A horizontal gold ring travels up & down, its radius following
+     * the spherical cage profile so it looks like a security scan.   */
+    if (scanRef.current) {
+      const R = 2.15;
+      const y = Math.sin(t * 0.5) * R;
+      const ringR = Math.sqrt(Math.max(0.0001, R * R - y * y));
+      scanRef.current.position.y = y;
+      scanRef.current.scale.setScalar(ringR);
+      scanRef.current.material.opacity = 0.55 * (ringR / R);
+    }
   });
 
   return (
@@ -117,6 +130,18 @@ export default function CryptoCore({ mouse, pathname = '/' }) {
             <torusGeometry args={[RING_RADIUS, RING_TUBE, RING_TUBE_SEGS, RING_SEGMENTS]} />
           </mesh>
         ))}
+
+        {/* ── Holographic scan ring (vault scanner) ───────────────── */}
+        <mesh ref={scanRef} rotation={[Math.PI / 2, 0, 0]}>
+          <torusGeometry args={[1, 0.012, 8, 96]} />
+          <meshBasicMaterial
+            color="#FFD700"
+            transparent
+            opacity={0.55}
+            blending={THREE.AdditiveBlending}
+            depthWrite={false}
+          />
+        </mesh>
       </group>
 
       {/* ═══════════════════════════════════════════════════════════

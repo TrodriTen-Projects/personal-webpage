@@ -8,6 +8,7 @@
  */
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import { GlowCard } from '@/components/ui/glow-card';
 
 export default function Experience() {
   const { t } = useTranslation();
@@ -46,14 +47,14 @@ export default function Experience() {
                 <div className="timeline__node" />
 
                 {/* Card content */}
-                <div className="glass-card">
+                <GlowCard className="p-8">
                   <div className="glass-card__header">
                     <h3 className="glass-card__title">{item.role}</h3>
                     <span className="glass-card__meta">{item.period}</span>
                   </div>
                   <p className="timeline__company">{item.company}</p>
                   <p className="glass-card__body">{item.description}</p>
-                </div>
+                </GlowCard>
               </motion.div>
             );
           })}

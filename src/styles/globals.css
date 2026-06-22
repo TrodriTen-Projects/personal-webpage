@@ -1,0 +1,124 @@
+/* Cascade layer order: `legacy` (the migrating index.css) ranks below
+   Tailwind's `utilities` so every shadcn / 21st.dev utility wins, but above
+   `base` so the existing design system keeps its look until each component is
+   migrated. Specificity ties are then broken in favour of utilities. */
+@layer theme, base, components, legacy, utilities;
+
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import './index.css' layer(legacy);
+
+/* Dark-only product: the `dark` variant targets the same tokens. */
+@custom-variant dark (&:is(.dark *));
+
+/* ───────────────────────────────────────────────────────────────────────────
+   DESIGN TOKENS — Cybersecurity palette (locked):
+   bg #050505 · text #F5F5F5 · accent gold #FFD700
+   Mapped onto shadcn's semantic token names so every shadcn / 21st.dev
+   component inherits the brand automatically.
+   ─────────────────────────────────────────────────────────────────────────── */
+:root {
+  --background: #050505;
+  --foreground: #f5f5f5;
+
+  --card: #0a0a0a;
+  --card-foreground: #f5f5f5;
+  --popover: #0a0a0a;
+  --popover-foreground: #f5f5f5;
+
+  --primary: #ffd700;            /* cyber gold */
+  --primary-foreground: #050505; /* black text on gold */
+
+  --secondary: #141414;
+  --secondary-foreground: #f5f5f5;
+
+  --muted: #141414;
+  --muted-foreground: #888888;
+
+  --accent: #ffd700;
+  --accent-foreground: #050505;
+
+  --destructive: #ef4444;
+  --destructive-foreground: #f5f5f5;
+
+  --border: #1a1a1a;
+  --input: #1a1a1a;
+  --ring: #ffd700;
+
+  /* Brutalist: tight, intentional radius */
+  --radius: 0.25rem;
+
+  --font-mono: 'JetBrains Mono', ui-monospace, 'Cascadia Code', monospace;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Expose tokens to Tailwind v4's utility engine (bg-background, text-primary…) */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --radius-xl: calc(var(--radius) + 6px);
+
+  --font-mono: var(--font-mono);
+  --font-sans: var(--font-sans);
+
+  /* Animated CTA (ShimmerButton) */
+  --animate-shimmer-slide: shimmer-slide var(--speed, 3s) ease-in-out infinite alternate;
+  --animate-spin-around: spin-around calc(var(--speed, 3s) * 2) infinite linear;
+}
+
+@keyframes shimmer-slide {
+  to {
+    transform: translate(calc(100cqw - 100%), 0);
+  }
+}
+
+@keyframes spin-around {
+  0% {
+    transform: translateZ(0) rotate(0);
+  }
+  15%,
+  35% {
+    transform: translateZ(0) rotate(90deg);
+  }
+  65%,
+  85% {
+    transform: translateZ(0) rotate(270deg);
+  }
+  100% {
+    transform: translateZ(0) rotate(360deg);
+  }
+}
+
+/* Base layer — applies once the legacy index.css is retired. Kept in a layer so
+   the not-yet-migrated index.css (unlayered) still wins during the transition. */
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+  }
+}
