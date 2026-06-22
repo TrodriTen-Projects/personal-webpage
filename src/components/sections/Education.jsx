@@ -10,6 +10,7 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { FaGraduationCap } from 'react-icons/fa';
+import { GlowCard } from '@/components/ui/glow-card';
 
 /* ── Animation variants ──────────────────────────────────────────────────── */
 const containerVariants = {
@@ -61,52 +62,51 @@ export default function Education() {
         >
           {items.map((item, index) => {
             const link = EDUCATION_LINKS[index];
-            const Card = link ? motion.a : motion.div;
             const linkProps = link
-              ? { href: link, target: '_blank', rel: 'noopener noreferrer' }
+              ? { as: 'a', href: link, target: '_blank', rel: 'noopener noreferrer' }
               : {};
 
             return (
-            <Card
-              key={index}
-              className="glass-card education-card"
-              variants={cardVariants}
-              {...linkProps}
-            >
-              {/* Icon */}
-              <div className="education-card__icon">
-                <FaGraduationCap />
-              </div>
+              <motion.div key={index} variants={cardVariants} className="flex-1">
+                <GlowCard
+                  {...linkProps}
+                  className="block h-full border-l-2 border-l-primary p-8 no-underline text-inherit"
+                >
+                  {/* Icon */}
+                  <div className="education-card__icon">
+                    <FaGraduationCap />
+                  </div>
 
-              {/* Degree */}
-              <h3 className="education-card__degree">{item.degree}</h3>
+                  {/* Degree */}
+                  <h3 className="education-card__degree">{item.degree}</h3>
 
-              {/* Institution & period */}
-              <p className="education-card__institution">{item.institution}</p>
-              <span className="education-card__period">{item.period}</span>
+                  {/* Institution & period */}
+                  <p className="education-card__institution">{item.institution}</p>
+                  <span className="education-card__period">{item.period}</span>
 
-              {/* Courses badges (if present) */}
-              {item.courses && (
-                <div className="education-badges">
-                  {item.courses.map((course) => (
-                    <span key={course} className="education-badge education-badge--course">
-                      {course}
-                    </span>
-                  ))}
-                </div>
-              )}
+                  {/* Courses badges (if present) */}
+                  {item.courses && (
+                    <div className="education-badges">
+                      {item.courses.map((course) => (
+                        <span key={course} className="education-badge education-badge--course">
+                          {course}
+                        </span>
+                      ))}
+                    </div>
+                  )}
 
-              {/* Activity badges (if present) */}
-              {item.activities && (
-                <div className="education-badges">
-                  {item.activities.map((activity) => (
-                    <span key={activity} className="education-badge education-badge--activity">
-                      {activity}
-                    </span>
-                  ))}
-                </div>
-              )}
-            </Card>
+                  {/* Activity badges (if present) */}
+                  {item.activities && (
+                    <div className="education-badges">
+                      {item.activities.map((activity) => (
+                        <span key={activity} className="education-badge education-badge--activity">
+                          {activity}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </GlowCard>
+              </motion.div>
             );
           })}
         </motion.div>

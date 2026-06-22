@@ -15,6 +15,7 @@ import {
   FaLinkedin,
   FaGithub,
 } from 'react-icons/fa';
+import { ShimmerButton } from '@/components/ui/shimmer-button';
 
 /* ── Animation variants ──────────────────────────────────────────────────── */
 const containerVariants = {
@@ -67,10 +68,6 @@ export default function Contact() {
         {/* ── Title ───────────────────────────────────────────────────────── */}
         <motion.h2
           className="section-title"
-          /* Centered section: balance the decorative ::before bar (4px + gap)
-             with matching padding-right so the title text lands on the same
-             centered axis as the pills/CTA below. (translateX is unreliable
-             here because framer-motion controls the transform.) */
           style={{ justifyContent: 'center', paddingRight: 'calc(4px + var(--sp-4))' }}
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -130,12 +127,10 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <a
-            href="mailto:web@trodriten.com"
-            className="cta-button"
-          >
+          <ShimmerButton as="a" href="mailto:web@trodriten.com">
+            <FaEnvelope className="text-primary" />
             {t('contact.cta')}
-          </a>
+          </ShimmerButton>
         </motion.div>
 
         {/* ── Footer ─────────────────────────────────────────────────────── */}

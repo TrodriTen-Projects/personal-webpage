@@ -10,28 +10,30 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
-import HttpBackend from 'i18next-http-backend';
+
+// Import translations statically to avoid network roundtrips
+import enTranslation from '../../public/locales/en/translation.json';
+import esTranslation from '../../public/locales/es/translation.json';
+
+const resources = {
+  en: { translation: enTranslation },
+  es: { translation: esTranslation }
+};
 
 const SUPPORTED_LANGUAGES = ['en', 'es'];
 
 i18n
-  // Load translations via HTTP (lazy-loaded from /public/locales)
-  .use(HttpBackend)
   // Detect user language from localStorage or browser settings
   .use(LanguageDetector)
   // Pass i18n instance to react-i18next
   .use(initReactI18next)
   .init({
+    resources,
     // ---------- Language settings ----------
     fallbackLng: 'en',
     supportedLngs: SUPPORTED_LANGUAGES,
     ns: ['translation'],
     defaultNS: 'translation',
-
-    // ---------- Backend – where to fetch JSON ----------
-    backend: {
-      loadPath: '/locales/{{lng}}/translation.json',
-    },
 
     // ---------- Detection – how to pick the initial language ----------
     detection: {
@@ -47,7 +49,8 @@ i18n
 
     // ---------- Misc ----------
     react: {
-      useSuspense: true,
+      // Disabling suspense since resources are static
+      useSuspense: false,
     },
   });
 

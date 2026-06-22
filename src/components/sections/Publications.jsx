@@ -10,6 +10,7 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { FaFileAlt } from 'react-icons/fa';
 import { safeHref } from '../../utils/url';
+import { GlowCard } from '@/components/ui/glow-card';
 
 /* ── Animation variants ──────────────────────────────────────────────────── */
 const containerVariants = {
@@ -53,36 +54,36 @@ export default function Publications() {
           viewport={{ once: true, amount: 0.2 }}
         >
           {items.map((item, index) => (
-            <motion.a
-              key={index}
-              href={safeHref(item.link)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="glass-card publication-card"
-              variants={cardVariants}
-              style={{ display: 'block', textDecoration: 'none', color: 'inherit' }}
-            >
-              {/* Scanline overlay — purely decorative */}
-              <div className="publication-card__scanline" aria-hidden="true" />
+            <motion.div key={index} variants={cardVariants}>
+              <GlowCard
+                as="a"
+                href={safeHref(item.link)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block h-full p-8 no-underline text-inherit"
+              >
+                {/* Scanline overlay — purely decorative */}
+                <div className="publication-card__scanline" aria-hidden="true" />
 
-              {/* Icon */}
-              <div className="publication-card__icon">
-                <FaFileAlt />
-              </div>
+                {/* Icon */}
+                <div className="publication-card__icon">
+                  <FaFileAlt />
+                </div>
 
-              {/* Paper title */}
-              <h3 className="publication-card__title">{item.title}</h3>
+                {/* Paper title */}
+                <h3 className="publication-card__title">{item.title}</h3>
 
-              {/* Badges row */}
-              <div className="publication-card__badges">
-                <span className="publication-badge publication-badge--conference">
-                  {item.conference}
-                </span>
-                <span className="publication-badge publication-badge--role">
-                  {item.role}
-                </span>
-              </div>
-            </motion.a>
+                {/* Badges row */}
+                <div className="publication-card__badges">
+                  <span className="publication-badge publication-badge--conference">
+                    {item.conference}
+                  </span>
+                  <span className="publication-badge publication-badge--role">
+                    {item.role}
+                  </span>
+                </div>
+              </GlowCard>
+            </motion.div>
           ))}
         </motion.div>
       </div>

@@ -13,6 +13,8 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { FaShieldAlt, FaClipboardCheck, FaNetworkWired, FaCode } from 'react-icons/fa';
+import { GlowCard } from '@/components/ui/glow-card';
+import { ShimmerButton } from '@/components/ui/shimmer-button';
 
 /* ── Typewriter speed (ms per character) ─────────────────────────────────── */
 const TYPE_SPEED = 65;
@@ -112,26 +114,27 @@ export default function Hero() {
             variants={{
               visible: { transition: { staggerChildren: 0.15 } }
             }}
-            style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', gap: 'var(--sp-6)' }}
           >
             {services.map((svc) => {
               const Icon = svc.icon;
               return (
                 <motion.div
                   key={svc.id}
-                  className="glass-card service-card"
+                  className="h-full"
                   variants={{
                     hidden: { opacity: 0, y: 30 },
                     visible: { opacity: 1, y: 0 }
                   }}
                 >
-                  <div className="service-card__icon"><Icon size={32} style={{ marginBottom: '1rem', color: 'var(--color-accent)' }} /></div>
-                  <h3 className="mono accent-text" style={{ fontSize: 'var(--fs-md)', marginBottom: 'var(--sp-2)' }}>
-                    {t(`hero.services.${svc.id}.title`)}
-                  </h3>
-                  <p style={{ fontSize: 'var(--fs-sm)' }}>
-                    {t(`hero.services.${svc.id}.description`)}
-                  </p>
+                  <GlowCard className="service-card h-full p-8">
+                    <div className="service-card__icon"><Icon size={32} style={{ marginBottom: '1rem', color: 'var(--color-accent)' }} /></div>
+                    <h2 className="mono accent-text" style={{ fontSize: 'var(--fs-md)', marginBottom: 'var(--sp-2)' }}>
+                      {t(`hero.services.${svc.id}.title`)}
+                    </h2>
+                    <p style={{ fontSize: 'var(--fs-sm)' }}>
+                      {t(`hero.services.${svc.id}.description`)}
+                    </p>
+                  </GlowCard>
                 </motion.div>
               );
             })}
@@ -152,9 +155,15 @@ export default function Hero() {
               {t('hero.cta.description')}
             </p>
             <form
-              action="mailto:web@trodriten.com"
-              method="post"
-              encType="text/plain"
+              onSubmit={(e) => {
+                e.preventDefault();
+                const formData = new FormData(e.target);
+                const name = formData.get('name');
+                const body = formData.get('body');
+                const message = `Hola! Soy ${name} y quiero que me ayudes con ${body}`;
+                const whatsappUrl = `https://wa.me/573176193232?text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, '_blank');
+              }}
               style={{ display: 'flex', gap: 'var(--sp-4)', width: '100%', maxWidth: '500px', flexDirection: 'column' }}
             >
               <input
@@ -171,9 +180,9 @@ export default function Hero() {
                 required
                 className="form-input"
               ></textarea>
-              <button type="submit" className="cta-button" style={{ width: '100%', justifyContent: 'center' }}>
+              <ShimmerButton type="submit" className="w-full">
                 {t('hero.cta.submitButton')}
-              </button>
+              </ShimmerButton>
             </form>
           </motion.div>
         </div>
