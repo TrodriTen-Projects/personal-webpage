@@ -129,10 +129,10 @@
   <div id="root">
     <!--
       SEO fallback: readable by crawlers that skip JS.
-      The inline script below removes it instantly before first paint,
-      so real users never see it. React then mounts normally.
+      Wrapped in <noscript> so real users (with JS enabled)
+      never see a flash of unstyled content.
     -->
-    <div id="seo-fallback">
+    <noscript>
       <header>
         <nav aria-label="Main navigation">
           <a href="/">Inicio</a>
@@ -191,9 +191,8 @@
           <p>GitHub: <a href="https://github.com/TrodriTen">TrodriTen</a></p>
         </section>
       </main>
-    </div>
+    </noscript>
   </div>
-  <script>document.getElementById('seo-fallback')?.remove();</script>
   <script type="module" src="/src/main.jsx"></script>
 </body>
 
