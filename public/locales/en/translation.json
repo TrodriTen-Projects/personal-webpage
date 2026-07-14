@@ -15,21 +15,26 @@
     "role": "Cybersecurity Engineer",
     "scrollHint": "Explore my services",
     "services": {
+      "cta": "Message me on WhatsApp",
       "defensive": {
         "title": "Defensive Security",
-        "description": "Protecting systems and networks through robust defensive strategies and continuous monitoring."
+        "description": "Protecting systems and networks through robust defensive strategies and continuous monitoring.",
+        "whatsapp": "Hi Tomás! I saw your website and I'm interested in your Defensive Security service. Can we talk?"
       },
       "grc": {
         "title": "GRC & Auditing",
-        "description": "Ensuring regulatory compliance (GDPR, HIPAA, NIST) and aligning IT operations with business objectives."
+        "description": "Ensuring regulatory compliance (GDPR, HIPAA, NIST) and aligning IT operations with business objectives.",
+        "whatsapp": "Hi Tomás! I saw your website and I'm interested in your GRC & Auditing service. Can we talk?"
       },
       "network": {
         "title": "Network Architecture",
-        "description": "Designing scalable and secure communications infrastructure for modern and cloud environments."
+        "description": "Designing scalable and secure communications infrastructure for modern and cloud environments.",
+        "whatsapp": "Hi Tomás! I saw your website and I'm interested in your Network Architecture service. Can we talk?"
       },
       "dev": {
         "title": "Software Development",
-        "description": "Building automated backends and integrating secure workflows with Python, FastAPI, and React."
+        "description": "Building automated backends and integrating secure workflows with Python, FastAPI, and React.",
+        "whatsapp": "Hi Tomás! I saw your website and I'm interested in your Software Development service. Can we talk?"
       }
     },
     "cta": {

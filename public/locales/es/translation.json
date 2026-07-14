@@ -15,21 +15,26 @@
     "role": "Ingeniero de Ciberseguridad",
     "scrollHint": "Explorar mis servicios",
     "services": {
+      "cta": "Escríbeme por WhatsApp",
       "defensive": {
         "title": "Seguridad Defensiva",
-        "description": "Protección de sistemas y redes mediante estrategias defensivas robustas y monitoreo continuo."
+        "description": "Protección de sistemas y redes mediante estrategias defensivas robustas y monitoreo continuo.",
+        "whatsapp": "¡Hola Tomás! Vi tu página web y me interesa el servicio de Seguridad Defensiva. ¿Podemos hablar?"
       },
       "grc": {
         "title": "GRC y Auditoría",
-        "description": "Aseguramiento del cumplimiento normativo (GDPR, HIPAA, NIST) y alineación de TI con los objetivos del negocio."
+        "description": "Aseguramiento del cumplimiento normativo (GDPR, HIPAA, NIST) y alineación de TI con los objetivos del negocio.",
+        "whatsapp": "¡Hola Tomás! Vi tu página web y me interesa el servicio de GRC y Auditoría. ¿Podemos hablar?"
       },
       "network": {
         "title": "Arquitectura de Redes",
-        "description": "Diseño de infraestructura de comunicaciones escalable y segura para entornos modernos y en la nube."
+        "description": "Diseño de infraestructura de comunicaciones escalable y segura para entornos modernos y en la nube.",
+        "whatsapp": "¡Hola Tomás! Vi tu página web y me interesa el servicio de Arquitectura de Redes. ¿Podemos hablar?"
       },
       "dev": {
         "title": "Desarrollo de Software",
-        "description": "Construcción de backends automatizados y flujos de trabajo seguros con Python, FastAPI y React."
+        "description": "Construcción de backends automatizados y flujos de trabajo seguros con Python, FastAPI y React.",
+        "whatsapp": "¡Hola Tomás! Vi tu página web y me interesa el servicio de Desarrollo de Software. ¿Podemos hablar?"
       }
     },
     "cta": {
