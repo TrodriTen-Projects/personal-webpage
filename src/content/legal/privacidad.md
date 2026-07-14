@@ -4,7 +4,7 @@ updated: "2026-06-25"
 ---
 
 Esta Política describe cómo se recolectan, usan y protegen los datos personales
-de quienes visitan **web.trodriten.com** (el "Sitio"), en cumplimiento de la
+de quienes visitan **www.trodriten.com** (el "Sitio"), en cumplimiento de la
 **Ley 1581 de 2012** y el **Decreto 1377 de 2013** de Colombia, y del
 **Reglamento (UE) 2016/679 (GDPR)** cuando resulte aplicable.
 

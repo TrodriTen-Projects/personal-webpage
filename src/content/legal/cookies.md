@@ -5,7 +5,7 @@ updated: "2026-06-25"
 
 Esta Política de Cookies complementa la
 **[Política de Privacidad](/legal/privacidad)** y explica qué cookies utiliza
-**web.trodriten.com** y cómo gestionarlas.
+**www.trodriten.com** y cómo gestionarlas.
 
 ## 1. ¿Qué son las cookies?
 
