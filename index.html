@@ -128,68 +128,72 @@
 <body>
   <div id="root">
     <!--
-      Static fallback for search-engine crawlers that may not execute JS.
-      React replaces this entire subtree on mount.
+      SEO fallback: readable by crawlers that skip JS.
+      The inline script below removes it instantly before first paint,
+      so real users never see it. React then mounts normally.
     -->
-    <header>
-      <nav aria-label="Main navigation">
-        <a href="/">Inicio</a>
-        <a href="/about">Sobre Mí</a>
-        <a href="/experience">Experiencia</a>
-        <a href="/education">Educación</a>
-        <a href="/publications">Publicaciones</a>
-        <a href="/clients">Clientes</a>
-        <a href="/blog">Blog</a>
-        <a href="/contact">Contacto</a>
-      </nav>
-    </header>
-    <main>
-      <h1>Tomás Alberto Rodríguez Peña - Cybersecurity Engineer</h1>
-      <p>Ingeniero de Ciberseguridad en Bogotá, Colombia. Egresado de la Universidad de los Andes con Maestría en
-        Seguridad de la Información. Especializado en seguridad defensiva y ofensiva, GRC (NIST, GDPR, HIPAA),
-        infraestructura segura y desarrollo de software.</p>
+    <div id="seo-fallback">
+      <header>
+        <nav aria-label="Main navigation">
+          <a href="/">Inicio</a>
+          <a href="/about">Sobre Mí</a>
+          <a href="/experience">Experiencia</a>
+          <a href="/education">Educación</a>
+          <a href="/publications">Publicaciones</a>
+          <a href="/clients">Clientes</a>
+          <a href="/blog">Blog</a>
+          <a href="/contact">Contacto</a>
+        </nav>
+      </header>
+      <main>
+        <h1>Tomás Alberto Rodríguez Peña - Cybersecurity Engineer</h1>
+        <p>Ingeniero de Ciberseguridad en Bogotá, Colombia. Egresado de la Universidad de los Andes con Maestría en
+          Seguridad de la Información. Especializado en seguridad defensiva y ofensiva, GRC (NIST, GDPR, HIPAA),
+          infraestructura segura y desarrollo de software.</p>
 
-      <section>
-        <h2>Servicios</h2>
-        <ul>
-          <li><strong>Seguridad Defensiva</strong> - Protección de sistemas y redes mediante estrategias defensivas
-            robustas y monitoreo continuo.</li>
-          <li><strong>GRC y Auditoría</strong> - Aseguramiento del cumplimiento normativo (GDPR, HIPAA, NIST) y
-            alineación de TI con los objetivos del negocio.</li>
-          <li><strong>Arquitectura de Redes</strong> - Diseño de infraestructura de comunicaciones escalable y segura
-            para entornos modernos y en la nube.</li>
-          <li><strong>Desarrollo de Software</strong> - Construcción de backends automatizados y flujos de trabajo
-            seguros con Python, FastAPI y React.</li>
-        </ul>
-      </section>
+        <section>
+          <h2>Servicios</h2>
+          <ul>
+            <li><strong>Seguridad Defensiva</strong> - Protección de sistemas y redes mediante estrategias defensivas
+              robustas y monitoreo continuo.</li>
+            <li><strong>GRC y Auditoría</strong> - Aseguramiento del cumplimiento normativo (GDPR, HIPAA, NIST) y
+              alineación de TI con los objetivos del negocio.</li>
+            <li><strong>Arquitectura de Redes</strong> - Diseño de infraestructura de comunicaciones escalable y segura
+              para entornos modernos y en la nube.</li>
+            <li><strong>Desarrollo de Software</strong> - Construcción de backends automatizados y flujos de trabajo
+              seguros con Python, FastAPI y React.</li>
+          </ul>
+        </section>
 
-      <section>
-        <h2>Experiencia</h2>
-        <ul>
-          <li>Asistente Graduado de Investigación - Universidad de los Andes</li>
-          <li>Aprendiz de Auditoría en Ciberseguridad - ControlCase LLC</li>
-          <li>Ingeniero de Infraestructura de Seguridad - Axenor Corporations</li>
-          <li>Practicante de Desarrollo de Software - DISRUPTIA</li>
-          <li>Asistente de Docencia en TI - Universidad de los Andes</li>
-        </ul>
-      </section>
+        <section>
+          <h2>Experiencia</h2>
+          <ul>
+            <li>Asistente Graduado de Investigación - Universidad de los Andes</li>
+            <li>Aprendiz de Auditoría en Ciberseguridad - ControlCase LLC</li>
+            <li>Ingeniero de Infraestructura de Seguridad - Axenor Corporations</li>
+            <li>Practicante de Desarrollo de Software - DISRUPTIA</li>
+            <li>Asistente de Docencia en TI - Universidad de los Andes</li>
+          </ul>
+        </section>
 
-      <section>
-        <h2>Educación</h2>
-        <ul>
-          <li>Maestría en Seguridad de la Información - Universidad de los Andes (2026–2027)</li>
-          <li>Pregrado en Ingeniería de Sistemas y Computación - Universidad de los Andes (2022–2025)</li>
-        </ul>
-      </section>
+        <section>
+          <h2>Educación</h2>
+          <ul>
+            <li>Maestría en Seguridad de la Información - Universidad de los Andes (2026–2027)</li>
+            <li>Pregrado en Ingeniería de Sistemas y Computación - Universidad de los Andes (2022–2025)</li>
+          </ul>
+        </section>
 
-      <section>
-        <h2>Contacto</h2>
-        <p>Correo: <a href="mailto:web@trodriten.com">web@trodriten.com</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/tomasalbertorodriguez">tomasalbertorodriguez</a></p>
-        <p>GitHub: <a href="https://github.com/TrodriTen">TrodriTen</a></p>
-      </section>
-    </main>
+        <section>
+          <h2>Contacto</h2>
+          <p>Correo: <a href="mailto:web@trodriten.com">web@trodriten.com</a></p>
+          <p>LinkedIn: <a href="https://linkedin.com/in/tomasalbertorodriguez">tomasalbertorodriguez</a></p>
+          <p>GitHub: <a href="https://github.com/TrodriTen">TrodriTen</a></p>
+        </section>
+      </main>
+    </div>
   </div>
+  <script>document.getElementById('seo-fallback')?.remove();</script>
   <script type="module" src="/src/main.jsx"></script>
 </body>
 
