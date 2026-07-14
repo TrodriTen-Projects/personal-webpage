@@ -1,5 +1,5 @@
 /**
- * BlogPost — renders a single Markdown post at /blog/:slug.
+ * BlogPost - renders a single Markdown post at /blog/:slug.
  * Uses react-markdown + remark-gfm (tables, strikethrough, task lists) rendered
  * as React elements (no dangerouslySetInnerHTML → CSP-safe), styled with the
  * Tailwind typography plugin tuned to the brand palette.

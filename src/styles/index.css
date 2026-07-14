@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════════════════
-   CYBERSECURITY PORTFOLIO — DESIGN SYSTEM
+   CYBERSECURITY PORTFOLIO - DESIGN SYSTEM
    Premium dark theme · Glassmorphism · Gold accent
    ═══════════════════════════════════════════════════════════════════════════ */
 
@@ -830,7 +830,7 @@ html {
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
-   14. ABOUT — SKILL PILLS
+   14. ABOUT - SKILL PILLS
    ═══════════════════════════════════════════════════════════════════════════ */
 .skill-pills {
   display: flex;
@@ -858,7 +858,7 @@ html {
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
-   15. TIMELINE — EXTRA STYLES
+   15. TIMELINE - EXTRA STYLES
    ═══════════════════════════════════════════════════════════════════════════ */
 .timeline__company {
   font-family: var(--font-body);
@@ -964,7 +964,7 @@ html {
   overflow: hidden;
 }
 
-/* Scanline overlay — subtle moving horizontal line */
+/* Scanline overlay - subtle moving horizontal line */
 .publication-card__scanline {
   position: absolute;
   inset: 0;
@@ -1022,7 +1022,7 @@ html {
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
-   18. NAVBAR — SCROLLED STATE
+   18. NAVBAR - SCROLLED STATE
    ═══════════════════════════════════════════════════════════════════════════ */
 .navbar--scrolled {
   background: rgba(5, 5, 5, 0.95);
@@ -1055,7 +1055,7 @@ html {
     --nav-height: 56px;
   }
 
-  /* Navbar — collapse links into a hamburger dropdown */
+  /* Navbar - collapse links into a hamburger dropdown */
   .navbar { padding: 0 var(--sp-4); }
 
   .navbar__toggle { display: inline-flex; }
@@ -1089,7 +1089,7 @@ html {
   /* Skills */
   .skills-grid { grid-template-columns: 1fr; }
 
-  /* Timeline — stack all left */
+  /* Timeline - stack all left */
   .timeline::before { left: 20px; }
 
   .timeline__item,
@@ -1118,7 +1118,7 @@ html {
   /* Section title */
   .section-title { font-size: var(--fs-2xl); }
 
-  /* Education — stack cards vertically */
+  /* Education - stack cards vertically */
   .education-grid { flex-direction: column; }
 
   /* Hero */

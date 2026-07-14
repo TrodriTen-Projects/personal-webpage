@@ -34,7 +34,7 @@ const SectionFallback = () => (
 );
 
 /**
- * SceneWrapper — Passes the current pathname down to Scene
+ * SceneWrapper - Passes the current pathname down to Scene
  */
 function SceneWrapper({ mouse }) {
   const location = useLocation();
@@ -46,7 +46,7 @@ function SceneWrapper({ mouse }) {
 }
 
 /**
- * App — Root component
+ * App - Root component
  */
 export default function App() {
   const mouse = useMousePosition();
@@ -58,7 +58,7 @@ export default function App() {
     // We do this by loading the scene on the first user interaction (scroll, mouse, touch),
     // which happens instantly for real users, but Lighthouse bots never trigger it.
     let isMounted = true;
-    
+
     const handleInteraction = () => {
       if (!isMounted) return;
       setShowScene(true);

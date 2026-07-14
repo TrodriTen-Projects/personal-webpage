@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 
 /**
- * useMousePosition — Tracks normalized mouse position (-1 to 1)
+ * useMousePosition - Tracks normalized mouse position (-1 to 1)
  * Used to drive 3D interactions (particle repulsion, shield scale, etc.)
  */
 export default function useMousePosition() {

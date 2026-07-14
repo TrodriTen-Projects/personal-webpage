@@ -1,7 +1,7 @@
 import { cn } from '@/lib/utils';
 
 /**
- * ShimmerButton — high-conversion CTA with a gold spark travelling around the
+ * ShimmerButton - high-conversion CTA with a gold spark travelling around the
  * border (ported from the Magic UI / 21st.dev pattern, recoloured to the
  * cyber-gold palette). Pass `as="a"` for link CTAs.
  *

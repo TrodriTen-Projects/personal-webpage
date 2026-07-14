@@ -1,5 +1,5 @@
 /**
- * LegalPage — renders a legal document (privacy, cookies, terms) from Markdown
+ * LegalPage - renders a legal document (privacy, cookies, terms) from Markdown
  * at /legal/:slug. Reuses react-markdown (CSP-safe) + the typography plugin.
  */
 import { useTranslation } from 'react-i18next';

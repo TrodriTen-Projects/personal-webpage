@@ -1,5 +1,5 @@
 /**
- * Legal docs loader — reads src/content/legal/*.md (Markdown with a `title` /
+ * Legal docs loader - reads src/content/legal/*.md (Markdown with a `title` /
  * `updated` front-matter) and exposes them by slug for the /legal/:slug route.
  */
 const modules = import.meta.glob('/src/content/legal/*.md', {

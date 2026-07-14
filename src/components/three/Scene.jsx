@@ -15,7 +15,7 @@ import DataStream from './DataStream';
 import { useFrame } from '@react-three/fiber';
 
 /**
- * AnimatedLayer — wraps the core and particles and translates them
+ * AnimatedLayer - wraps the core and particles and translates them
  * depending on the current route.
  */
 function AnimatedLayer({ pathname, mouse }) {
@@ -38,7 +38,7 @@ function AnimatedLayer({ pathname, mouse }) {
 }
 
 /**
- * SceneContent — All 3D elements inside the Canvas
+ * SceneContent - All 3D elements inside the Canvas
  */
 function SceneContent({ mouse, pathname }) {
   const [glitchActive, setGlitchActive] = useState(false);
@@ -117,7 +117,7 @@ function SceneContent({ mouse, pathname }) {
 }
 
 /**
- * Scene — Main 3D Canvas wrapper
+ * Scene - Main 3D Canvas wrapper
  * Manages the R3F Canvas, camera, and passes mouse/pathname data to children.
  */
 export default function Scene({ mouse, pathname }) {

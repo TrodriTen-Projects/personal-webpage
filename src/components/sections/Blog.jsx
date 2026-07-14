@@ -1,5 +1,5 @@
 /**
- * Blog index — lists every Markdown post (newest first) as a GlowCard that
+ * Blog index - lists every Markdown post (newest first) as a GlowCard that
  * links to /blog/:slug. Posts come from src/content/blog/*.md via src/lib/blog.
  */
 import { useTranslation } from 'react-i18next';

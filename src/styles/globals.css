@@ -15,7 +15,7 @@
 @custom-variant dark (&:is(.dark *));
 
 /* ───────────────────────────────────────────────────────────────────────────
-   DESIGN TOKENS — Cybersecurity palette (locked):
+   DESIGN TOKENS - Cybersecurity palette (locked):
    bg #050505 · text #F5F5F5 · accent gold #FFD700
    Mapped onto shadcn's semantic token names so every shadcn / 21st.dev
    component inherits the brand automatically.
@@ -113,7 +113,7 @@
   }
 }
 
-/* Base layer — applies once the legacy index.css is retired. Kept in a layer so
+/* Base layer - applies once the legacy index.css is retired. Kept in a layer so
    the not-yet-migrated index.css (unlayered) still wins during the transition. */
 @layer base {
   * {

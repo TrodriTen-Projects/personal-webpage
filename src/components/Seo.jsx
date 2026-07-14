@@ -1,5 +1,5 @@
 /**
- * Seo — per-route document metadata using React 19's native metadata hoisting
+ * Seo - per-route document metadata using React 19's native metadata hoisting
  * (rendering <title>/<meta>/<link> anywhere lifts them into <head>). No extra
  * dependency. Overrides the site-wide defaults from index.html for each page,
  * which helps search engines and social previews for deep links (/blog/:slug…).
@@ -8,7 +8,7 @@ const SITE = 'https://www.trodriten.com';
 const BRAND = 'Tomas Rodriguez · TrodriTen';
 
 export default function Seo({ title, description, path = '' }) {
-  const fullTitle = title ? `${title} | ${BRAND}` : `${BRAND} — Cybersecurity & Web Dev Bogotá`;
+  const fullTitle = title ? `${title} | Tomas Rodriguez (TrodriTen)` : `Tomas Rodriguez (TrodriTen) - Cybersecurity Engineer, Bogotá`;
   const url = `${SITE}${path}`;
 
   return (

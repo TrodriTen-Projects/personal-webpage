@@ -118,31 +118,31 @@
       {
         "role": "Asistente Graduado de Investigación",
         "company": "Universidad de los Andes",
-        "period": "Ago 2026 — Jun 2027",
+        "period": "Ago 2026 - Jun 2027",
         "description": "Planifiqué la infraestructura y el ecosistema para sistemas IoT basados en DDS."
       },
       {
         "role": "Aprendiz de Auditoría en Ciberseguridad",
         "company": "ControlCase LLC",
-        "period": "Feb 2026 — Presente",
+        "period": "Feb 2026 - Presente",
         "description": "Revisé y actualicé a nivel global preguntas de auditoría de ciberseguridad basadas en GDPR, verificando el cumplimiento normativo en organizaciones con operaciones internacionales. Coordiné la recolección de evidencia en 4 procesos concurrentes de auditoría HIPAA, SOC 2 y NIST para clientes a nivel mundial, validando la documentación de controles y asegurando la alineación con los requisitos de cumplimiento de cada marco."
       },
       {
         "role": "Ingeniero de Infraestructura de Seguridad",
         "company": "Axenor Corporations",
-        "period": "Abr 2025 — Presente",
+        "period": "Abr 2025 - Presente",
         "description": "Administro infraestructura híbrida en AWS y on-premise. Implementé IAM y Active Directory, controles de firewall, configuración de VPN y segmentación de red. Configuré y operé SIEM, IPS/IDS y demás controles de seguridad para el monitoreo y la defensa de la organización."
       },
       {
         "role": "Practicante de Desarrollo de Software",
         "company": "DISRUPTIA",
-        "period": "Mar 2025 — May 2025",
+        "period": "Mar 2025 - May 2025",
         "description": "Construí backends automatizados utilizando FastAPI, PostgreSQL y Google Apps Script para gestionar datos de formularios, automatizar más de 700 correos semanales e integrar flujos de trabajo entre Microsoft Forms, hojas de cálculo y Outlook para ~700 usuarios activos. Optimicé operaciones digitales, reduciendo el tiempo de respuesta en un 30% y eliminando el 99% de los errores manuales en tareas administrativas clave."
       },
       {
         "role": "Asistente de Docencia en TI e Infraestructura",
         "company": "Universidad de los Andes",
-        "period": "Ene 2023 — Dic 2025",
+        "period": "Ene 2023 - Dic 2025",
         "description": "Orienté a más de 270 estudiantes en cuatro cursos, con énfasis en Infraestructura de Comunicaciones y TI en las Organizaciones, fomentando una mentalidad colaborativa de resolución de problemas en laboratorios y sesiones de tutoría."
       }
     ]
@@ -153,7 +153,7 @@
       {
         "degree": "Maestría en Seguridad de la Información",
         "institution": "Universidad de los Andes",
-        "period": "Ene 2026 — Jun 2027",
+        "period": "Ene 2026 - Jun 2027",
         "courses": [
           "Cursos Relevantes: Defensa de Redes y Ciberseguridad, Ingeniería Criptográfica, Seguridad en la Nube."
         ]
@@ -161,7 +161,7 @@
       {
         "degree": "Pregrado en Ingeniería de Sistemas y Computación",
         "institution": "Universidad de los Andes",
-        "period": "Ene 2022 — Dic 2025",
+        "period": "Ene 2022 - Dic 2025",
         "activities": [
           "Ingeniero de Machine Learning en Sinfonía Uniandes y Desarrollador Full-stack en SpaceTech AESS UniAndes"
         ]

@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="Tomas Rodriguez (TrodriTen) — Cybersecurity Engineer in Bogotá, Colombia. Defensive & offensive security, GRC (NIST, GDPR, HIPAA) and web / software development for businesses." />
+    content="Tomas Rodriguez (TrodriTen) - Cybersecurity Engineer & Universidad de los Andes alumnus in Bogotá, Colombia. Defensive & offensive security, GRC auditing (NIST, GDPR, HIPAA), secure infrastructure and full-stack web development." />
   <meta name="keywords"
     content="Tomas Rodriguez, TrodriTen, Cybersecurity, Cybersecurity Engineer, Ingeniero de Ciberseguridad, Ciberseguridad Bogota, Ciberseguridad Colombia, Software Development Bogota, Desarrollo Bogota, Desarrollo de Software Bogota, Paginas Web Bogota, Desarrollo Web Bogota, Web Development Bogota, Pentesting Bogota, Security Infrastructure Engineer, GRC, NIST, GDPR, HIPAA, AWS, IAM, SIEM" />
   <meta name="author" content="Tomas Alberto Rodriguez Peña" />
@@ -20,9 +20,9 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="TrodriTen" />
-  <meta property="og:title" content="Tomas Rodriguez | Cybersecurity Engineer & Web Development — Bogotá" />
+  <meta property="og:title" content="Tomas Rodriguez (TrodriTen) | Cybersecurity Engineer - Bogotá, Colombia" />
   <meta property="og:description"
-    content="Cybersecurity Engineer in Bogotá: defensive & offensive security, GRC and web / software development." />
+    content="Cybersecurity Engineer & Uniandes alumnus in Bogotá. Defensive & offensive security, GRC auditing (NIST, GDPR, HIPAA) and secure web development." />
   <meta property="og:url" content="https://www.trodriten.com/" />
   <meta property="og:image" content="https://www.trodriten.com/og-image.png" />
   <meta property="og:locale" content="es_CO" />
@@ -30,9 +30,9 @@
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Tomas Rodriguez | Cybersecurity & Web Dev — Bogotá (TrodriTen)" />
+  <meta name="twitter:title" content="Tomas Rodriguez (TrodriTen) | Cybersecurity Engineer - Bogotá" />
   <meta name="twitter:description"
-    content="Cybersecurity Engineer in Bogotá: defensive & offensive security, GRC and web / software development." />
+    content="Cybersecurity Engineer & Uniandes alumnus in Bogotá. Defensive & offensive security, GRC auditing (NIST, GDPR, HIPAA) and secure web development." />
   <meta name="twitter:image" content="https://www.trodriten.com/og-image.png" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -44,7 +44,7 @@
     <link rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" />
   </noscript>
-  <title>Tomas Rodriguez | Cybersecurity Engineer & Web Development in Bogotá — TrodriTen</title>
+  <title>Tomas Rodriguez (TrodriTen) | Cybersecurity Engineer -Bogotá, Colombia</title>
 
   <script type="application/ld+json">
     {
@@ -52,25 +52,73 @@
       "@graph": [
         {
           "@type": "Person",
+          "@id": "https://www.trodriten.com/#person",
           "name": "Tomás Alberto Rodríguez Peña",
-          "alternateName": "Tomas Rodriguez",
+          "alternateName": ["Tomas Rodriguez", "TrodriTen"],
+          "givenName": "Tomás Alberto",
+          "familyName": "Rodríguez Peña",
           "url": "https://www.trodriten.com/",
+          "image": "https://www.trodriten.com/og-image.png",
+          "description": "Cybersecurity Engineer based in Bogotá, Colombia. Specialized in defensive & offensive security, GRC (NIST, GDPR, HIPAA), and secure software development.",
           "jobTitle": "Cybersecurity Engineer",
-          "worksFor": { "@type": "Organization", "name": "TrodriTen" },
-          "address": { "@type": "PostalAddress", "addressLocality": "Bogotá", "addressCountry": "CO" },
+          "nationality": { "@type": "Country", "name": "Colombia" },
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Bogotá",
+            "addressRegion": "Cundinamarca",
+            "addressCountry": "CO"
+          },
+          "alumniOf": [
+            {
+              "@type": "CollegeOrUniversity",
+              "name": "Universidad de los Andes",
+              "url": "https://uniandes.edu.co",
+              "sameAs": "https://en.wikipedia.org/wiki/University_of_the_Andes_(Colombia)"
+            }
+          ],
+          "hasCredential": [
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "B.S. Systems and Computing Engineering",
+              "credentialCategory": "degree",
+              "recognizedBy": { "@type": "CollegeOrUniversity", "name": "Universidad de los Andes" }
+            },
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "M.S. Information Security",
+              "credentialCategory": "degree",
+              "recognizedBy": { "@type": "CollegeOrUniversity", "name": "Universidad de los Andes" }
+            }
+          ],
+          "worksFor": [
+            { "@type": "Organization", "name": "TrodriTen" },
+            { "@type": "Organization", "name": "Axenor Corporations" },
+            { "@type": "Organization", "name": "ControlCase LLC" }
+          ],
+          "knowsAbout": ["Cybersecurity", "Penetration Testing", "GRC", "NIST CSF", "GDPR", "HIPAA", "AWS", "IAM", "SIEM", "Software Development", "Web Development", "Python", "FastAPI", "React", "Network Security"],
           "sameAs": [
             "https://linkedin.com/in/tomasalbertorodriguez",
             "https://github.com/TrodriTen"
-          ],
-          "knowsAbout": ["Cybersecurity", "Penetration Testing", "GRC", "NIST CSF", "GDPR", "HIPAA", "AWS", "IAM", "SIEM", "Software Development", "Web Development"]
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.trodriten.com/#website",
+          "url": "https://www.trodriten.com/",
+          "name": "TrodriTen - Tomas Rodriguez",
+          "description": "Personal website of Tomas Rodriguez (TrodriTen), Cybersecurity Engineer in Bogotá, Colombia.",
+          "publisher": { "@id": "https://www.trodriten.com/#person" },
+          "inLanguage": ["es-CO", "en-US"]
         },
         {
           "@type": "ProfessionalService",
+          "@id": "https://www.trodriten.com/#business",
           "name": "TrodriTen",
           "url": "https://www.trodriten.com/",
           "areaServed": { "@type": "City", "name": "Bogotá" },
-          "description": "Cybersecurity and software / web development services in Bogotá, Colombia.",
-          "founder": { "@type": "Person", "name": "Tomás Alberto Rodríguez Peña" }
+          "description": "Cybersecurity consulting, GRC auditing, and secure software development services in Bogotá, Colombia.",
+          "founder": { "@id": "https://www.trodriten.com/#person" },
+          "knowsAbout": ["Cybersecurity Consulting", "GRC Auditing", "Penetration Testing", "Web Development", "Cloud Security"]
         }
       ]
     }
@@ -78,7 +126,70 @@
 </head>
 
 <body>
-  <div id="root"></div>
+  <div id="root">
+    <!--
+      Static fallback for search-engine crawlers that may not execute JS.
+      React replaces this entire subtree on mount.
+    -->
+    <header>
+      <nav aria-label="Main navigation">
+        <a href="/">Inicio</a>
+        <a href="/about">Sobre Mí</a>
+        <a href="/experience">Experiencia</a>
+        <a href="/education">Educación</a>
+        <a href="/publications">Publicaciones</a>
+        <a href="/clients">Clientes</a>
+        <a href="/blog">Blog</a>
+        <a href="/contact">Contacto</a>
+      </nav>
+    </header>
+    <main>
+      <h1>Tomás Alberto Rodríguez Peña - Cybersecurity Engineer</h1>
+      <p>Ingeniero de Ciberseguridad en Bogotá, Colombia. Egresado de la Universidad de los Andes con Maestría en
+        Seguridad de la Información. Especializado en seguridad defensiva y ofensiva, GRC (NIST, GDPR, HIPAA),
+        infraestructura segura y desarrollo de software.</p>
+
+      <section>
+        <h2>Servicios</h2>
+        <ul>
+          <li><strong>Seguridad Defensiva</strong> - Protección de sistemas y redes mediante estrategias defensivas
+            robustas y monitoreo continuo.</li>
+          <li><strong>GRC y Auditoría</strong> - Aseguramiento del cumplimiento normativo (GDPR, HIPAA, NIST) y
+            alineación de TI con los objetivos del negocio.</li>
+          <li><strong>Arquitectura de Redes</strong> - Diseño de infraestructura de comunicaciones escalable y segura
+            para entornos modernos y en la nube.</li>
+          <li><strong>Desarrollo de Software</strong> - Construcción de backends automatizados y flujos de trabajo
+            seguros con Python, FastAPI y React.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Experiencia</h2>
+        <ul>
+          <li>Asistente Graduado de Investigación - Universidad de los Andes</li>
+          <li>Aprendiz de Auditoría en Ciberseguridad - ControlCase LLC</li>
+          <li>Ingeniero de Infraestructura de Seguridad - Axenor Corporations</li>
+          <li>Practicante de Desarrollo de Software - DISRUPTIA</li>
+          <li>Asistente de Docencia en TI - Universidad de los Andes</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Educación</h2>
+        <ul>
+          <li>Maestría en Seguridad de la Información - Universidad de los Andes (2026–2027)</li>
+          <li>Pregrado en Ingeniería de Sistemas y Computación - Universidad de los Andes (2022–2025)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Contacto</h2>
+        <p>Correo: <a href="mailto:web@trodriten.com">web@trodriten.com</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/tomasalbertorodriguez">tomasalbertorodriguez</a></p>
+        <p>GitHub: <a href="https://github.com/TrodriTen">TrodriTen</a></p>
+      </section>
+    </main>
+  </div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
 

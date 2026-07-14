@@ -1,7 +1,7 @@
 /**
  * ShieldMesh.jsx
  * ---------------------------------------------------------------------------
- * Outer protective layer of the CryptoCore — two nested wireframe
+ * Outer protective layer of the CryptoCore - two nested wireframe
  * icosahedrons that slowly rotate in opposite directions.  The outer shell
  * reacts to mouse proximity with a subtle scale-up, while an inner shell
  * adds depth.  A third, solid-but-nearly-invisible icosahedron sits between
@@ -19,45 +19,45 @@ const _targetScale = new THREE.Vector3();
 export default function ShieldMesh({ mouse }) {
   const outerRef = useRef();
   const innerRef = useRef();
-  const glowRef  = useRef();
+  const glowRef = useRef();
 
   /* ── material configs (memoised so we don't recreate every render) ── */
   const outerMat = useMemo(
     () => ({
-      color:            '#FFD700',
-      emissive:         '#FFD700',
+      color: '#FFD700',
+      emissive: '#FFD700',
       emissiveIntensity: 0.35,
-      wireframe:        true,
-      transparent:      true,
-      opacity:          0.45,
-      depthWrite:       false,
+      wireframe: true,
+      transparent: true,
+      opacity: 0.45,
+      depthWrite: false,
     }),
     [],
   );
 
   const innerMat = useMemo(
     () => ({
-      color:            '#FFD700',
-      emissive:         '#FFD700',
+      color: '#FFD700',
+      emissive: '#FFD700',
       emissiveIntensity: 0.2,
-      wireframe:        true,
-      transparent:      true,
-      opacity:          0.18,
-      depthWrite:       false,
+      wireframe: true,
+      transparent: true,
+      opacity: 0.18,
+      depthWrite: false,
     }),
     [],
   );
 
   const glowMat = useMemo(
     () => ({
-      color:            '#FFD700',
-      emissive:         '#FFD700',
+      color: '#FFD700',
+      emissive: '#FFD700',
       emissiveIntensity: 0.6,
-      transparent:      true,
-      opacity:          0.07,
-      blending:         THREE.AdditiveBlending,
-      side:             THREE.BackSide,
-      depthWrite:       false,
+      transparent: true,
+      opacity: 0.07,
+      blending: THREE.AdditiveBlending,
+      side: THREE.BackSide,
+      depthWrite: false,
     }),
     [],
   );
@@ -77,7 +77,7 @@ export default function ShieldMesh({ mouse }) {
       outerRef.current.scale.lerp(_targetScale, 0.045);
     }
 
-    /* --- inner icosahedron — counter-rotate, slightly faster --- */
+    /* --- inner icosahedron - counter-rotate, slightly faster --- */
     if (innerRef.current) {
       innerRef.current.rotation.y -= 0.0018;
       innerRef.current.rotation.x -= 0.0009;

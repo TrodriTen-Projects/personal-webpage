@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 
 /**
- * SectionWrapper — Reusable container for each portfolio section.
+ * SectionWrapper - Reusable container for each portfolio section.
  * Provides consistent padding, min-height, animation triggers, and ID targeting.
  */
 export default function SectionWrapper({
