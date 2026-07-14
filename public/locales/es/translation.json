@@ -7,6 +7,7 @@
     "publications": "Publicaciones",
     "contact": "Contacto",
     "clients": "Clientes",
+    "blog": "Blog",
     "language": "Idioma"
   },
   "hero": {
@@ -46,31 +47,60 @@
       "regulations": {
         "title": "Regulaciones",
         "items": [
-          "NIST CSF",
-          "GDPR",
-          "HIPAA"
+          {
+            "name": "NIST CSF",
+            "url": "https://www.nist.gov/cyberframework"
+          },
+          {
+            "name": "GDPR",
+            "url": "https://gdpr.eu/"
+          },
+          {
+            "name": "HIPAA",
+            "url": "https://www.hhs.gov/hipaa/index.html"
+          }
         ]
       },
       "cybersecurity": {
         "title": "Ciberseguridad",
         "items": [
-          "Seguridad ofensiva y defensiva",
-          "análisis de vulnerabilidades",
-          "gestión de riesgos de TI",
-          "infraestructura de comunicaciones",
-          "arquitecturas seguras en la nube",
-          "IoT"
+          "Seguridad Defensiva",
+          "Seguridad Ofensiva",
+          "Gestión de Riesgos",
+          "Cloud"
         ]
       },
       "tools": {
         "title": "Herramientas y Tecnologías",
         "items": [
-          "Python",
-          "Bash",
-          "FastAPI",
-          "PostgreSQL",
-          "React",
-          "Git"
+          {
+            "name": "Python",
+            "url": "https://www.python.org"
+          },
+          {
+            "name": "Bash",
+            "url": "https://www.gnu.org/software/bash/"
+          },
+          {
+            "name": "FastAPI",
+            "url": "https://fastapi.tiangolo.com"
+          },
+          {
+            "name": "PostgreSQL",
+            "url": "https://www.postgresql.org"
+          },
+          {
+            "name": "AWS",
+            "url": "https://aws.amazon.com"
+          },
+          {
+            "name": "React",
+            "url": "https://react.dev"
+          },
+          {
+            "name": "Git",
+            "url": "https://git-scm.com"
+          }
         ]
       },
       "languages": {
@@ -96,6 +126,12 @@
         "company": "ControlCase LLC",
         "period": "Feb 2026 — Presente",
         "description": "Revisé y actualicé a nivel global preguntas de auditoría de ciberseguridad basadas en GDPR, verificando el cumplimiento normativo en organizaciones con operaciones internacionales. Coordiné la recolección de evidencia en 4 procesos concurrentes de auditoría HIPAA, SOC 2 y NIST para clientes a nivel mundial, validando la documentación de controles y asegurando la alineación con los requisitos de cumplimiento de cada marco."
+      },
+      {
+        "role": "Ingeniero de Infraestructura de Seguridad",
+        "company": "Axenor Corporations",
+        "period": "Abr 2025 — Presente",
+        "description": "Administro infraestructura híbrida en AWS y on-premise. Implementé IAM y Active Directory, controles de firewall, configuración de VPN y segmentación de red. Configuré y operé SIEM, IPS/IDS y demás controles de seguridad para el monitoreo y la defensa de la organización."
       },
       {
         "role": "Practicante de Desarrollo de Software",
@@ -162,12 +198,42 @@
   "clients": {
     "title": "Clientes y Proyectos",
     "description": "Algunos de los increíbles proyectos y clientes con los que he trabajado.",
+    "viewProject": "Ver proyecto",
+    "empty": "Próximamente...",
     "items": [
       {
         "name": "Luxury Smile Architects",
         "description": "Sitio web de clínica dental e infraestructura.",
-        "link": "https://luxurysmile.eu/"
+        "logo": "/clients/luxury-smile.png",
+        "link": "https://luxurysmilearchitects.eu/"
+      },
+      {
+        "name": "Sandra Rodriguez Dental",
+        "description": "Sitio web y presencia digital para consultorio odontológico.",
+        "logo": "/clients/sandra-rodriguez-dental.webp",
+        "link": "https://www.sandrarodriguezdental.com/"
       }
     ]
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Publicaciones sobre ciberseguridad, investigación y notas técnicas.",
+    "readMore": "Leer más",
+    "back": "← Volver al blog",
+    "empty": "Próximamente..."
+  },
+  "consent": {
+    "title": "Cookies",
+    "text": "Uso cookies propias y de terceros para analítica y publicidad. Puedes aceptarlas o rechazarlas. Más información en la",
+    "cookiesLink": "Política de Cookies",
+    "accept": "Aceptar",
+    "reject": "Rechazar"
+  },
+  "legal": {
+    "back": "← Inicio",
+    "updated": "Última actualización",
+    "privacy": "Privacidad",
+    "cookies": "Cookies",
+    "terms": "Términos"
   }
 }

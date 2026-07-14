@@ -18,8 +18,10 @@ const NAV_ITEMS = [
   { key: 'home',         path: '/' },
   { key: 'about',        path: '/about' },
   { key: 'experience',   path: '/experience' },
+  { key: 'clients',      path: '/clients' },
   { key: 'education',    path: '/education' },
   { key: 'publications', path: '/publications' },
+  { key: 'blog',         path: '/blog' },
   { key: 'contact',      path: '/contact' },
 ];
 

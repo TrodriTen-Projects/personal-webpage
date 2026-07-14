@@ -953,6 +953,12 @@ html {
   gap: var(--sp-8);
 }
 
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: var(--sp-6);
+}
+
 .publication-card {
   position: relative;
   overflow: hidden;

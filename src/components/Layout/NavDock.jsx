@@ -15,6 +15,7 @@ import {
   FaGraduationCap,
   FaFileLines,
   FaUsers,
+  FaFeather,
   FaEnvelope,
 } from 'react-icons/fa6';
 import { cn } from '@/lib/utils';
@@ -23,9 +24,10 @@ const ITEMS = [
   { key: 'home', path: '/', Icon: FaTerminal },
   { key: 'about', path: '/about', Icon: FaUser },
   { key: 'experience', path: '/experience', Icon: FaBriefcase },
+  { key: 'clients', path: '/clients', Icon: FaUsers },
   { key: 'education', path: '/education', Icon: FaGraduationCap },
   { key: 'publications', path: '/publications', Icon: FaFileLines },
-  { key: 'clients', path: '/clients', Icon: FaUsers },
+  { key: 'blog', path: '/blog', Icon: FaFeather },
   { key: 'contact', path: '/contact', Icon: FaEnvelope },
 ];
 

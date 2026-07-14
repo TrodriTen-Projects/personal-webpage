@@ -9,6 +9,7 @@
  */
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import {
   FaEnvelope,
   FaWhatsapp,
@@ -16,6 +17,7 @@ import {
   FaGithub,
 } from 'react-icons/fa';
 import { ShimmerButton } from '@/components/ui/shimmer-button';
+import Seo from '@/components/Seo';
 
 /* ── Animation variants ──────────────────────────────────────────────────── */
 const containerVariants = {
@@ -64,6 +66,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="section">
+      <Seo title={t('contact.title')} description={t('contact.subtitle')} path="/contact" />
       <div className="section__inner text-center">
         {/* ── Title ───────────────────────────────────────────────────────── */}
         <motion.h2
@@ -142,6 +145,11 @@ export default function Contact() {
           transition={{ duration: 0.5, delay: 0.6 }}
         >
           <small>{t('contact.footer')}</small>
+          <div style={{ marginTop: 'var(--sp-3)', display: 'flex', gap: 'var(--sp-5)', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <Link to="/legal/privacidad" className="mono" style={{ fontSize: 'var(--fs-xs)', color: 'var(--color-text-secondary)' }}>{t('legal.privacy')}</Link>
+            <Link to="/legal/cookies" className="mono" style={{ fontSize: 'var(--fs-xs)', color: 'var(--color-text-secondary)' }}>{t('legal.cookies')}</Link>
+            <Link to="/legal/terminos" className="mono" style={{ fontSize: 'var(--fs-xs)', color: 'var(--color-text-secondary)' }}>{t('legal.terms')}</Link>
+          </div>
         </motion.footer>
       </div>
     </section>

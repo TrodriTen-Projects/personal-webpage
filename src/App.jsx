@@ -2,6 +2,7 @@ import { Suspense, lazy, useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Layout/Navbar';
 import Hero from './components/sections/Hero';
+import Analytics from './components/analytics/Analytics';
 import useMousePosition from './hooks/useMousePosition';
 
 /* ── Lazy-load the heavy 3D scene so HTML/text paints first ──────── */
@@ -13,6 +14,9 @@ const Experience = lazy(() => import('./components/sections/Experience'));
 const Education = lazy(() => import('./components/sections/Education'));
 const Publications = lazy(() => import('./components/sections/Publications'));
 const Clients = lazy(() => import('./components/sections/Clients'));
+const Blog = lazy(() => import('./components/sections/Blog'));
+const BlogPost = lazy(() => import('./components/sections/BlogPost'));
+const LegalPage = lazy(() => import('./components/sections/LegalPage'));
 const Contact = lazy(() => import('./components/sections/Contact'));
 
 /* ── Section fallback ──────────────────────────────────── */
@@ -87,6 +91,9 @@ export default function App() {
       {/* ── Navigation ──────────────────────────────────── */}
       <Navbar />
 
+      {/* ── Consent-gated analytics (nothing loads until accepted) ── */}
+      <Analytics />
+
       {/* ── Scrollable HTML Sections ────────────────────── */}
       <main
         style={{
@@ -101,9 +108,12 @@ export default function App() {
               <Route path="/" element={<Hero />} />
               <Route path="/about" element={<About />} />
               <Route path="/experience" element={<Experience />} />
+              <Route path="/clients" element={<Clients />} />
               <Route path="/education" element={<Education />} />
               <Route path="/publications" element={<Publications />} />
-              <Route path="/clients" element={<Clients />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<BlogPost />} />
+              <Route path="/legal/:slug" element={<LegalPage />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </Suspense>

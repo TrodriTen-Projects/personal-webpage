@@ -8,6 +8,9 @@
 @import 'tw-animate-css';
 @import './index.css' layer(legacy);
 
+/* Prose styling for Markdown blog posts */
+@plugin "@tailwindcss/typography";
+
 /* Dark-only product: the `dark` variant targets the same tokens. */
 @custom-variant dark (&:is(.dark *));
 
@@ -26,7 +29,7 @@
   --popover: #0a0a0a;
   --popover-foreground: #f5f5f5;
 
-  --primary: #ffd700;            /* cyber gold */
+  --primary: #FFD700;            /* cyber gold */
   --primary-foreground: #050505; /* black text on gold */
 
   --secondary: #141414;
@@ -35,7 +38,7 @@
   --muted: #141414;
   --muted-foreground: #888888;
 
-  --accent: #ffd700;
+  --accent: #FFD700;
   --accent-foreground: #050505;
 
   --destructive: #ef4444;
@@ -43,7 +46,7 @@
 
   --border: #1a1a1a;
   --input: #1a1a1a;
-  --ring: #ffd700;
+  --ring: #FFD700;
 
   /* Brutalist: tight, intentional radius */
   --radius: 0.25rem;

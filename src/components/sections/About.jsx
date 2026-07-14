@@ -9,6 +9,7 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { FaShieldAlt, FaLock, FaCode, FaGlobe } from 'react-icons/fa';
+import Seo from '@/components/Seo';
 
 /* ── Map category keys to icons ──────────────────────────────────────────── */
 const CATEGORY_ICONS = {
@@ -53,6 +54,11 @@ export default function About() {
 
   return (
     <section id="about" className="section">
+      <Seo
+        title={t('about.title')}
+        description="Ciberseguridad ofensiva y defensiva, GRC (NIST, GDPR, HIPAA), Cloud/AWS y desarrollo de software — Tomas Rodriguez, Bogotá."
+        path="/about"
+      />
       <div className="section__inner">
         {/* ── Title ───────────────────────────────────────────────────────── */}
         <motion.h2
@@ -108,15 +114,32 @@ export default function About() {
                   className="skill-pills"
                   variants={containerVariants}
                 >
-                  {category.items.map((item, index) => (
-                    <motion.span
-                      key={index}
-                      className="skill-pill"
-                      variants={pillVariants}
-                    >
-                      {item}
-                    </motion.span>
-                  ))}
+                  {category.items.map((item, index) => {
+                    const isLink = item && typeof item === 'object' && item.url;
+                    if (isLink) {
+                      return (
+                        <motion.a
+                          key={index}
+                          href={item.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="skill-pill skill-pill--link"
+                          variants={pillVariants}
+                        >
+                          {item.name} ↗
+                        </motion.a>
+                      );
+                    }
+                    return (
+                      <motion.span
+                        key={index}
+                        className="skill-pill"
+                        variants={pillVariants}
+                      >
+                        {typeof item === 'object' ? item.name : item}
+                      </motion.span>
+                    );
+                  })}
                 </motion.div>
               </motion.div>
             );
