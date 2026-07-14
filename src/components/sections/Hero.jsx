@@ -12,12 +12,18 @@ import { useState, useEffect, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import { FaShieldAlt, FaClipboardCheck, FaNetworkWired, FaCode } from 'react-icons/fa';
+import { FaShieldAlt, FaClipboardCheck, FaNetworkWired, FaCode, FaWhatsapp } from 'react-icons/fa';
 import { GlowCard } from '@/components/ui/glow-card';
 import { ShimmerButton } from '@/components/ui/shimmer-button';
+import { trackLead } from '@/lib/tracking';
 
 /* ── Typewriter speed (ms per character) ─────────────────────────────────── */
 const TYPE_SPEED = 65;
+
+/* ── WhatsApp ────────────────────────────────────────────────────────────── */
+const WHATSAPP_NUMBER = '573176193232';
+const whatsappUrl = (message) =>
+  `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 
 export default function Hero() {
   const { t } = useTranslation();
@@ -126,7 +132,15 @@ export default function Hero() {
                     visible: { opacity: 1, y: 0 }
                   }}
                 >
-                  <GlowCard className="service-card h-full p-8">
+                  <GlowCard
+                    as="a"
+                    href={whatsappUrl(t(`hero.services.${svc.id}.whatsapp`))}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={trackLead}
+                    aria-label={`${t(`hero.services.${svc.id}.title`)} — ${t('hero.services.cta')}`}
+                    className="service-card block h-full p-8"
+                  >
                     <div className="service-card__icon"><Icon size={32} style={{ marginBottom: '1rem', color: 'var(--color-accent)' }} /></div>
                     <h2 className="mono accent-text" style={{ fontSize: 'var(--fs-md)', marginBottom: 'var(--sp-2)' }}>
                       {t(`hero.services.${svc.id}.title`)}
@@ -134,6 +148,13 @@ export default function Hero() {
                     <p style={{ fontSize: 'var(--fs-sm)' }}>
                       {t(`hero.services.${svc.id}.description`)}
                     </p>
+                    <span
+                      className="mono service-card__cta"
+                      style={{ fontSize: 'var(--fs-xs)', color: 'var(--color-accent)' }}
+                    >
+                      <FaWhatsapp aria-hidden="true" />
+                      {t('hero.services.cta')}
+                    </span>
                   </GlowCard>
                 </motion.div>
               );
