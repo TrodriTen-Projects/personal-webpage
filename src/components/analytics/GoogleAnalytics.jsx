@@ -4,7 +4,7 @@ import { TRACKING } from '@/lib/tracking';
 /**
  * Loads gtag.js (Google Analytics 4 + Google Ads). The gtag bootstrap runs as
  * bundled app JS (script-src 'self'); only the external loader needs
- * googletagmanager.com in the CSP — so no 'unsafe-inline' is required.
+ * googletagmanager.com in the CSP - so no 'unsafe-inline' is required.
  * Mounted only after consent (see Analytics.jsx).
  */
 export default function GoogleAnalytics() {

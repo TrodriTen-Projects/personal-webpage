@@ -1,5 +1,5 @@
 /**
- * NavDock — macOS-style magnification dock, rendered INSIDE the top navbar
+ * NavDock - macOS-style magnification dock, rendered INSIDE the top navbar
  * (desktop only). Items grow on cursor proximity; tooltips drop below.
  * react-router NavLink for active state; labels via react-i18next.
  * Mobile keeps the hamburger dropdown (this dock is `hidden md:flex`).

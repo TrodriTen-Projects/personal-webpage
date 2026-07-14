@@ -62,7 +62,7 @@ export default function Publications() {
                 rel="noopener noreferrer"
                 className="block h-full p-8 no-underline text-inherit"
               >
-                {/* Scanline overlay — purely decorative */}
+                {/* Scanline overlay - purely decorative */}
                 <div className="publication-card__scanline" aria-hidden="true" />
 
                 {/* Icon */}

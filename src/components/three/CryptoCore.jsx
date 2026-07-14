@@ -4,9 +4,9 @@
  * Central 3D model of the cybersecurity portfolio hero. Contains the inner
  * layers of the composition:
  *
- *   1. Inner octahedron core — glass/transmission material, pulsing scale
- *   2. Three orbital torus rings — different axes, different speeds
- *   3. ShieldMesh — dual wireframe icosahedrons with edge glow
+ *   1. Inner octahedron core - glass/transmission material, pulsing scale
+ *   2. Three orbital torus rings - different axes, different speeds
+ *   3. ShieldMesh - dual wireframe icosahedrons with edge glow
  *
  * ParticleNetwork and DataStream are rendered separately by Scene.jsx so
  * they can be positioned and configured independently.
@@ -27,16 +27,16 @@ import * as THREE from 'three';
 import ShieldMesh from './ShieldMesh';
 
 /* ── tunables ──────────────────────────────────────────────────────────── */
-const RING_RADIUS      = 1.6;
-const RING_TUBE        = 0.015;
-const RING_SEGMENTS    = 64;
-const RING_TUBE_SEGS   = 8;
-const PULSE_SPEED      = 1.2;       // oscillation Hz (approx)
-const PULSE_AMPLITUDE  = 0.06;      // ±6 % scale swing
+const RING_RADIUS = 1.6;
+const RING_TUBE = 0.015;
+const RING_SEGMENTS = 64;
+const RING_TUBE_SEGS = 8;
+const PULSE_SPEED = 1.2;       // oscillation Hz (approx)
+const PULSE_AMPLITUDE = 0.06;      // ±6 % scale swing
 
 /* ── ring configs: rotation axis tilts & per-ring speed multiplier ──── */
 const RING_CONFIGS = [
-  { axis: new THREE.Euler(0, 0, 0),                speed: 0.003  },
+  { axis: new THREE.Euler(0, 0, 0), speed: 0.003 },
   { axis: new THREE.Euler(Math.PI / 3, 0, Math.PI / 6), speed: -0.004 },
   { axis: new THREE.Euler(0, Math.PI / 4, Math.PI / 3), speed: 0.0025 },
 ];
@@ -44,21 +44,21 @@ const RING_CONFIGS = [
 export default function CryptoCore({ mouse, pathname = '/' }) {
   /* ── refs ────────────────────────────────────────────────────────── */
   const groupRef = useRef();
-  const coreRef  = useRef();
+  const coreRef = useRef();
   const ringsRef = useRef([]);
-  const scanRef  = useRef();
+  const scanRef = useRef();
 
   /* ── memoised ring material ──────────────────────────────────────── */
   const ringMat = useMemo(
     () =>
       new THREE.MeshStandardMaterial({
-        color:            '#FFD700',
-        emissive:         '#FFD700',
+        color: '#FFD700',
+        emissive: '#FFD700',
         emissiveIntensity: 0.5,
-        metalness:        0.7,
-        roughness:        0.25,
-        transparent:      true,
-        opacity:          0.55,
+        metalness: 0.7,
+        roughness: 0.25,
+        transparent: true,
+        opacity: 0.55,
       }),
     [],
   );
@@ -99,7 +99,7 @@ export default function CryptoCore({ mouse, pathname = '/' }) {
   return (
     <group>
       {/* ═══════════════════════════════════════════════════════════
-       * LAYER 1 — Inner Octahedron Core
+       * LAYER 1 - Inner Octahedron Core
        * Glass-like transmission material for a holographic feel.
        * ═══════════════════════════════════════════════════════════ */}
       <group>
@@ -145,7 +145,7 @@ export default function CryptoCore({ mouse, pathname = '/' }) {
       </group>
 
       {/* ═══════════════════════════════════════════════════════════
-       * LAYER 2 — Shield Mesh (wireframe icosahedrons)
+       * LAYER 2 - Shield Mesh (wireframe icosahedrons)
        * ═══════════════════════════════════════════════════════════ */}
       <group>
         <ShieldMesh mouse={mouse} />

@@ -4,7 +4,7 @@
  * Reads every Markdown file in `src/content/blog/*.md` at build time via
  * Vite's import.meta.glob, parses a small YAML-ish front-matter block, and
  * exposes the posts sorted newest-first. To publish, just drop a new `.md`
- * file in that folder with front-matter — it appears automatically after the
+ * file in that folder with front-matter - it appears automatically after the
  * next build/deploy.
  *
  * Front-matter example:

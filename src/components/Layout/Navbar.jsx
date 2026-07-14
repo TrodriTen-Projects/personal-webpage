@@ -1,5 +1,5 @@
 /**
- * Navbar — Fixed top navigation
+ * Navbar - Fixed top navigation
  *
  * - Left:   Logo "T.R." in JetBrains Mono accent color
  * - Centre: Navigation links to different pages
@@ -15,14 +15,14 @@ import { FaEarthAmericas, FaBars, FaXmark } from 'react-icons/fa6';
 import NavDock from './NavDock';
 
 const NAV_ITEMS = [
-  { key: 'home',         path: '/' },
-  { key: 'about',        path: '/about' },
-  { key: 'experience',   path: '/experience' },
-  { key: 'clients',      path: '/clients' },
-  { key: 'education',    path: '/education' },
+  { key: 'home', path: '/' },
+  { key: 'about', path: '/about' },
+  { key: 'experience', path: '/experience' },
+  { key: 'clients', path: '/clients' },
+  { key: 'education', path: '/education' },
   { key: 'publications', path: '/publications' },
-  { key: 'blog',         path: '/blog' },
-  { key: 'contact',      path: '/contact' },
+  { key: 'blog', path: '/blog' },
+  { key: 'contact', path: '/contact' },
 ];
 
 export default function Navbar() {
@@ -41,7 +41,7 @@ export default function Navbar() {
     const onScroll = () => {
       const currentScrollY = window.scrollY;
       setScrolled(currentScrollY > 60);
-      
+
       if (currentScrollY > lastScrollY && currentScrollY > 100) {
         setHidden(true); // scrolling down
       } else {
@@ -116,7 +116,7 @@ export default function Navbar() {
           </span>
         </button>
 
-        {/* Hamburger — mobile only (shown via CSS ≤768px) */}
+        {/* Hamburger - mobile only (shown via CSS ≤768px) */}
         <button
           className="navbar__toggle"
           onClick={() => setMenuOpen((open) => !open)}

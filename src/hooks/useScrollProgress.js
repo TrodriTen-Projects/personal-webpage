@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 
 /**
- * useScrollProgress — Tracks normalized scroll progress (0 to 1)
+ * useScrollProgress - Tracks normalized scroll progress (0 to 1)
  * Falls back to standard window scroll when outside R3F ScrollControls.
  */
 export default function useScrollProgress() {

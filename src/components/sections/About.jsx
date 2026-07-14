@@ -56,7 +56,7 @@ export default function About() {
     <section id="about" className="section">
       <Seo
         title={t('about.title')}
-        description="Ciberseguridad ofensiva y defensiva, GRC (NIST, GDPR, HIPAA), Cloud/AWS y desarrollo de software — Tomas Rodriguez, Bogotá."
+        description="Ciberseguridad ofensiva y defensiva, GRC (NIST, GDPR, HIPAA), Cloud/AWS y desarrollo de software - Tomas Rodriguez, Bogotá."
         path="/about"
       />
       <div className="section__inner">

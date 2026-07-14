@@ -2,7 +2,7 @@
  * Tracking configuration + helpers.
  *
  * IDs come from VITE_* env vars (inlined at build time; not secrets). An empty
- * id simply means that provider does not load — safe degradation. No script is
+ * id simply means that provider does not load - safe degradation. No script is
  * ever injected until the visitor grants consent (see components/analytics).
  */
 const env = import.meta.env;

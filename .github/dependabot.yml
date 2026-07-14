@@ -1,4 +1,4 @@
-# Keeps dependencies patched over time — closes the long tail of H-02
+# Keeps dependencies patched over time - closes the long tail of H-02
 # (e.g. the vite/esbuild dev-toolchain advisory) via reviewable PRs you can
 # test before merging, instead of a risky one-shot major bump.
 version: 2

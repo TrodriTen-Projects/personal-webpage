@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
 /**
- * SectionHeader — brutalist / terminal-style section title:
+ * SectionHeader - brutalist / terminal-style section title:
  *   [ 01 ] ──── // LABEL
  *   Big Title
  * Animated reveal on scroll. Text is passed in (already translated via i18n).

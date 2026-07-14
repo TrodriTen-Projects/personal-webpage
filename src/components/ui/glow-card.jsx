@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { cn } from '@/lib/utils';
 
 /**
- * GlowCard — surface with a gold radial glow that follows the cursor and a
+ * GlowCard - surface with a gold radial glow that follows the cursor and a
  * border that brightens on hover. Pure CSS variables (no animation libs), so
  * it's cheap on the main thread. Renders a <div> by default; pass `as="a"`
  * (with href/target/rel) to make the whole card a link.

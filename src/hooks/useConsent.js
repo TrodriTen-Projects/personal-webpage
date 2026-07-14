@@ -14,7 +14,7 @@ export function useConsent() {
       const stored = localStorage.getItem(KEY);
       if (stored === 'granted' || stored === 'denied') setConsent(stored);
     } catch {
-      /* localStorage unavailable (private mode) — stay 'unset' */
+      /* localStorage unavailable (private mode) - stay 'unset' */
     }
   }, []);
 

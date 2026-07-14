@@ -1,4 +1,4 @@
-# Tomas Rodriguez — Portafolio (Cybersecurity Engineer)
+# Tomas Rodriguez - Portafolio (Cybersecurity Engineer)
 
 Portafolio personal interactivo: una SPA con un fondo 3D animado (WebGL), navegación por secciones, soporte bilingüe (ES/EN) y desplegado en Cloudflare Pages con CI/CD.
 
@@ -20,7 +20,7 @@ Portafolio personal interactivo: una SPA con un fondo 3D animado (WebGL), navega
 | 3D helpers | **@react-three/drei** | 9.12 | `Stars`, `Float`, `Preload` |
 | 3D FX | **@react-three/postprocessing** | 3.0 | Bloom, glitch, vignette, aberración |
 | Iconos | **react-icons** | 5.5 | FontAwesome (fa / fa6) |
-| Lint | **ESLint** | 9 | — |
+| Lint | **ESLint** | 9 | - |
 
 **Runtime:** Node 20 (recomendado). El proyecto es 100% cliente; **no hay backend ni base de datos**.
 
@@ -43,9 +43,9 @@ index.html
   `/` → Hero · `/about` · `/experience` · `/education` · `/publications` · `/contact`.
 - **Contenido desacoplado de la presentación.** Todos los textos y datos (experiencia, educación, publicaciones) viven en `public/locales/{en,es}/translation.json` y se leen con `t(...)` / `t(..., { returnObjects: true })`. Los componentes **no** tienen texto hardcodeado.
 - **Capa 3D** (`src/components/three/`), orquestada por `Scene.jsx`:
-  - `CryptoCore` — núcleo central (incluye `ShieldMesh`: icosaedros wireframe anidados).
-  - `ParticleNetwork` — 2000 partículas en cáscara esférica (muestreo Fibonacci), que reaccionan al mouse (repulsión + resorte) y dibujan líneas entre partículas cercanas.
-  - `DataStream` — "lluvia Matrix" vertical.
+  - `CryptoCore` - núcleo central (incluye `ShieldMesh`: icosaedros wireframe anidados).
+  - `ParticleNetwork` - 2000 partículas en cáscara esférica (muestreo Fibonacci), que reaccionan al mouse (repulsión + resorte) y dibujan líneas entre partículas cercanas.
+  - `DataStream` - "lluvia Matrix" vertical.
   - `Stars` (drei) + iluminación + post-procesado (Bloom, ChromaticAberration, Vignette, y un `Glitch` que dispara al cambiar de ruta).
   - El núcleo se desplaza/encoge según la ruta (`/` centrado a escala 1; el resto desplazado en X a escala 0.7).
 - **Hooks** (`src/hooks/`): `useMousePosition` (posición normalizada −1..1) y `useScrollProgress` (0..1).
@@ -105,7 +105,7 @@ checkout → setup-node 20 → npm ci → npm audit (prod) → npm run build →
 - **`npm ci`** instala exactamente desde el lockfile (requiere `.npmrc`, ver §6).
 - **Gate de seguridad:** `npm audit --omit=dev --audit-level=high` falla el pipeline si algo que **se publica** tiene CVE alto/crítico (las deps de build se vigilan aparte con Dependabot).
 - **Build:** `vite build` → genera `dist/` (incluye `_headers`, `_redirects`, `locales/`, assets con hash).
-- **Deploy:** sube `dist/` al hosting (Cloudflare Pages, vía wrangler — *Direct Upload*).
+- **Deploy:** sube `dist/` al hosting (Cloudflare Pages, vía wrangler - *Direct Upload*).
 - **Dependabot** (`.github/dependabot.yml`) abre PRs semanales para mantener dependencias y actions al día.
 
 **Secrets necesarios** en GitHub (*repo → Settings → Secrets and variables → Actions*):
@@ -137,8 +137,8 @@ npm run lint
 - **Cualquier `href` que venga de datos** debe pasar por `safeHref(...)` de `src/utils/url.js` (bloquea `javascript:` etc.).
 - **Colores / espaciados:** variables CSS en `:root` de `src/styles/index.css` (y `src/utils/constants.js` para el 3D).
 
-### Puntos delicados — NO romper sin entender
-- **`.npmrc` con `legacy-peer-deps=true`:** existe por un conflicto real de peers — `@react-three/drei@9` pide React 18/fiber 8, pero el proyecto usa **React 19 / fiber 9**. Sin esto, `npm ci` falla en CI. Los componentes drei usados (`Stars`, `Float`, `Preload`) funcionan igual. *Arreglo definitivo a futuro: migrar a `@react-three/drei@^10`.*
+### Puntos delicados - NO romper sin entender
+- **`.npmrc` con `legacy-peer-deps=true`:** existe por un conflicto real de peers - `@react-three/drei@9` pide React 18/fiber 8, pero el proyecto usa **React 19 / fiber 9**. Sin esto, `npm ci` falla en CI. Los componentes drei usados (`Stars`, `Float`, `Preload`) funcionan igual. *Arreglo definitivo a futuro: migrar a `@react-three/drei@^10`.*
 - **`public/_redirects`** (`/* /index.html 200`): sin él, recargar `/about` (o cualquier deep-link) da **404** en el hosting estático. No borrar.
 - **`public/_headers`**: ahí viven la **CSP y cabeceras de seguridad**. Si agregas un script externo (p. ej. analytics) o una fuente/CDN nueva, **debes** añadir su origen a la CSP o el navegador lo bloqueará.
 - **`vite.config.js` → `build.modulePreload.polyfill: false`:** desactivado a propósito para que el `index.html` no tenga `<script>` inline y la CSP pueda ser estricta (`script-src 'self'`). Si lo reactivas, ajusta la CSP.

@@ -118,31 +118,31 @@
       {
         "role": "Graduate Research Assistant",
         "company": "Universidad de los Andes",
-        "period": "Aug 2026 — Jun 2027",
+        "period": "Aug 2026 - Jun 2027",
         "description": "Planned the infrastructure and ecosystem for IoT systems based on DDS."
       },
       {
         "role": "Cybersecurity Audit Apprentice",
         "company": "ControlCase LLC",
-        "period": "Feb 2026 — Present",
+        "period": "Feb 2026 - Present",
         "description": "Reviewed and updated GDPR-based cybersecurity audit questions at a global level, verifying regulatory compliance in organizations with international operations. Coordinated evidence collection across 4 concurrent HIPAA, SOC 2, and NIST audit engagements for world wide clients, validating control documentation and ensuring alignment with each framework's compliance requirements."
       },
       {
         "role": "Security Infrastructure Engineer",
         "company": "Axenor Corporations",
-        "period": "Apr 2025 — Present",
+        "period": "Apr 2025 - Present",
         "description": "Manage hybrid infrastructure across AWS and on-premise. Implemented IAM and Active Directory, firewall controls, VPN configuration and network segmentation. Configured and operated SIEM, IPS/IDS and other security controls for monitoring and defense of the organization."
       },
       {
         "role": "Software Development Intern",
         "company": "DISRUPTIA",
-        "period": "Mar 2025 — May 2025",
+        "period": "Mar 2025 - May 2025",
         "description": "Built automated backends using FastAPI, PostgreSQL, and Google Apps Script to manage form data, automate over 700 weekly emails, and integrate workflows across Microsoft Forms, spreadsheets, and Outlook for ~700 active users. Optimized digital operations, reducing response time by 30% and eliminating 99% of manual errors in key administrative tasks."
       },
       {
         "role": "IT & Infrastructure Teaching Assistant",
         "company": "Universidad de los Andes",
-        "period": "Jan 2023 — Dec 2025",
+        "period": "Jan 2023 - Dec 2025",
         "description": "Guided over 270 students across four courses, with emphasis on Communications Infrastructure and IT in Organizations, fostering a collaborative problem-solving mindset in labs and tutoring sessions."
       }
     ]
@@ -153,7 +153,7 @@
       {
         "degree": "Master's Degree in Information Security",
         "institution": "Universidad de los Andes",
-        "period": "Jan 2026 — Jun 2027",
+        "period": "Jan 2026 - Jun 2027",
         "courses": [
           "Relevant Courses: Network Defense and Cybersecurity, Cryptographic Engineering, Cloud Security."
         ]
@@ -161,7 +161,7 @@
       {
         "degree": "Bachelor's in Systems and Computer Engineering",
         "institution": "Universidad de los Andes",
-        "period": "Jan 2022 — Dec 2025",
+        "period": "Jan 2022 - Dec 2025",
         "activities": [
           "ML Engineer at Sinfonía Uniandes & Full-stack Developer at SpaceTech AESS UniAndes"
         ]

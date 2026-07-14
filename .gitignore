@@ -7,7 +7,7 @@ dist
 dist
 
 
-# Environment & secrets — never commit these
+# Environment & secrets - never commit these
 .env
 .env.*
 !.env.example

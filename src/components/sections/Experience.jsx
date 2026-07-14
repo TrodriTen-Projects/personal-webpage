@@ -1,5 +1,5 @@
 /**
- * Experience Section — Vertical Timeline
+ * Experience Section - Vertical Timeline
  *
  * - Central vertical gold line (CSS via .timeline::before)
  * - Each item alternates left ↔ right on desktop

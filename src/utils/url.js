@@ -1,7 +1,7 @@
 /**
  * URL hardening (patches H-03: CWE-79 DOM-XSS / CWE-601 Open Redirect).
  *
- * React does NOT sanitize URL schemes in href/src attributes — only text.
+ * React does NOT sanitize URL schemes in href/src attributes - only text.
  * Any href built from data (i18n JSON, a future CMS, query params) must pass
  * through here so that `javascript:`, `data:`, `vbscript:` etc. can never be
  * placed in a link. Principle of least privilege: only known-safe schemes and
