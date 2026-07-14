@@ -46,7 +46,7 @@ export function ShimmerButton({
       <span className="relative z-10 flex items-center gap-2">{children}</span>
 
       {/* inner highlight */}
-      <div className="absolute inset-0 size-full rounded-[inherit] shadow-[inset_0_-8px_10px_#ffd70018] transition-shadow duration-300 group-hover:shadow-[inset_0_-6px_10px_#ffd70033]" />
+      <div className="absolute inset-0 size-full rounded-[inherit] shadow-[inset_0_-8px_10px_#FFD70018] transition-shadow duration-300 group-hover:shadow-[inset_0_-6px_10px_#FFD70033]" />
       {/* backdrop that masks the spark to a thin border */}
       <div className="absolute -z-20 [background:var(--bg)] [border-radius:var(--radius)] [inset:var(--cut)]" />
     </Tag>

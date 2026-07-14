@@ -7,6 +7,7 @@
     "publications": "Publications",
     "contact": "Contact",
     "clients": "Clients",
+    "blog": "Blog",
     "language": "Language"
   },
   "hero": {
@@ -46,31 +47,60 @@
       "regulations": {
         "title": "Regulations",
         "items": [
-          "NIST CSF",
-          "GDPR",
-          "HIPAA"
+          {
+            "name": "NIST CSF",
+            "url": "https://www.nist.gov/cyberframework"
+          },
+          {
+            "name": "GDPR",
+            "url": "https://gdpr.eu/"
+          },
+          {
+            "name": "HIPAA",
+            "url": "https://www.hhs.gov/hipaa/index.html"
+          }
         ]
       },
       "cybersecurity": {
         "title": "Cybersecurity",
         "items": [
-          "Offensive and defensive security",
-          "vulnerability analysis",
-          "IT risk management",
-          "communications infrastructure",
-          "secure cloud architectures",
-          "IoT"
+          "Defensive Security",
+          "Offensive Security",
+          "Risk Management",
+          "Cloud"
         ]
       },
       "tools": {
         "title": "Tools & Tech",
         "items": [
-          "Python",
-          "Bash",
-          "FastAPI",
-          "PostgreSQL",
-          "React",
-          "Git"
+          {
+            "name": "Python",
+            "url": "https://www.python.org"
+          },
+          {
+            "name": "Bash",
+            "url": "https://www.gnu.org/software/bash/"
+          },
+          {
+            "name": "FastAPI",
+            "url": "https://fastapi.tiangolo.com"
+          },
+          {
+            "name": "PostgreSQL",
+            "url": "https://www.postgresql.org"
+          },
+          {
+            "name": "AWS",
+            "url": "https://aws.amazon.com"
+          },
+          {
+            "name": "React",
+            "url": "https://react.dev"
+          },
+          {
+            "name": "Git",
+            "url": "https://git-scm.com"
+          }
         ]
       },
       "languages": {
@@ -96,6 +126,12 @@
         "company": "ControlCase LLC",
         "period": "Feb 2026 — Present",
         "description": "Reviewed and updated GDPR-based cybersecurity audit questions at a global level, verifying regulatory compliance in organizations with international operations. Coordinated evidence collection across 4 concurrent HIPAA, SOC 2, and NIST audit engagements for world wide clients, validating control documentation and ensuring alignment with each framework's compliance requirements."
+      },
+      {
+        "role": "Security Infrastructure Engineer",
+        "company": "Axenor Corporations",
+        "period": "Apr 2025 — Present",
+        "description": "Manage hybrid infrastructure across AWS and on-premise. Implemented IAM and Active Directory, firewall controls, VPN configuration and network segmentation. Configured and operated SIEM, IPS/IDS and other security controls for monitoring and defense of the organization."
       },
       {
         "role": "Software Development Intern",
@@ -162,12 +198,42 @@
   "clients": {
     "title": "Clients & Projects",
     "description": "Some of the awesome projects and clients I've worked with.",
+    "viewProject": "View project",
+    "empty": "Coming soon...",
     "items": [
       {
         "name": "Luxury Smile Architects",
         "description": "Dental clinic website and infrastructure.",
-        "link": "https://luxurysmile.eu/"
+        "logo": "/clients/luxury-smile.png",
+        "link": "https://luxurysmilearchitects.eu/"
+      },
+      {
+        "name": "Sandra Rodriguez Dental",
+        "description": "Website and digital presence for a dental practice.",
+        "logo": "/clients/sandra-rodriguez-dental.webp",
+        "link": "https://www.sandrarodriguezdental.com/"
       }
     ]
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Posts on cybersecurity, research and technical notes.",
+    "readMore": "Read more",
+    "back": "← Back to the blog",
+    "empty": "Coming soon..."
+  },
+  "consent": {
+    "title": "Cookies",
+    "text": "I use first- and third-party cookies for analytics and advertising. You can accept or reject them. More info in the",
+    "cookiesLink": "Cookie Policy",
+    "accept": "Accept",
+    "reject": "Reject"
+  },
+  "legal": {
+    "back": "← Home",
+    "updated": "Last updated",
+    "privacy": "Privacy",
+    "cookies": "Cookies",
+    "terms": "Terms"
   }
 }
