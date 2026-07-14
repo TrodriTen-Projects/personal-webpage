@@ -4,7 +4,7 @@
  * dependency. Overrides the site-wide defaults from index.html for each page,
  * which helps search engines and social previews for deep links (/blog/:slug…).
  */
-const SITE = 'https://web.trodriten.com';
+const SITE = 'https://www.trodriten.com';
 const BRAND = 'Tomas Rodriguez · TrodriTen';
 
 export default function Seo({ title, description, path = '' }) {

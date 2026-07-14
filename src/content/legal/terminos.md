@@ -3,7 +3,7 @@ title: "Términos y Condiciones"
 updated: "2026-06-25"
 ---
 
-El acceso y uso de **web.trodriten.com** (el "Sitio") implica la aceptación de
+El acceso y uso de **www.trodriten.com** (el "Sitio") implica la aceptación de
 los presentes Términos y Condiciones.
 
 ## 1. Objeto
